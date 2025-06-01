@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit 
+    bootstrap="bootstrap.php"
+    colors="true"
+    verbose="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    stopOnError="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    stopOnRisky="false"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    beStrictAboutTestsThatDoNotTestAnything="true"
+    beStrictAboutOutputDuringTests="true"
+    beStrictAboutChangesToGlobalState="true"
+    beStrictAboutCoversAnnotation="true"
+    backupGlobals="false"
+    backupStaticAttributes="false"
+    cacheResult="true"
+    cacheTokens="true"
+>
+    <testsuites>
+        <testsuite name="Unit Tests">
+            <directory suffix="Test.php">./unit</directory>
+        </testsuite>
+        <testsuite name="Integration Tests">
+            <directory suffix="Test.php">./integration</directory>
+        </testsuite>
+        <testsuite name="Functional Tests">
+            <directory suffix="Test.php">./functional</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">../src</directory>
+        </include>
+        <exclude>
+            <directory suffix=".php">../vendor</directory>
+        </exclude>
+    </coverage>
+
+    <php>
+        <const name="WP_TESTS_CONFIG_FILE_PATH" value="tests/test-config.php" />
+        <const name="WP_TESTS_DIR" value="tests/wordpress-tests-lib" />
+        <const name="WP_ROOT_DIR" value="tests/wordpress" />
+        <ini name="display_errors" value="1"/>
+        <ini name="memory_limit" value="-1"/>
+        <ini name="error_reporting" value="-1"/>
+        <ini name="log_errors" value="1"/>
+        <ini name="error_log" value="php://stderr"/>
+        <ini name="xdebug.mode" value="coverage"/>
+    </php>
+
+    <listeners>
+        <listener class="WP_CLI\PHPUnit\Listener\Command\CommandListener"/>
+    </listeners>
+</phpunit>

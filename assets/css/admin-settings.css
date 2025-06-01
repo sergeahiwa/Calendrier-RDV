@@ -1,0 +1,340 @@
+/**
+ * Styles pour la page des paramètres d'administration
+ */
+
+/* Conteneur principal */
+.cal-rdv-wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* En-tête */
+.cal-rdv-header {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.cal-rdv-header h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+/* Navigation par onglets */
+.cal-rdv-nav-tabs {
+    margin: 0 0 20px;
+    padding: 0;
+    border-bottom: 1px solid #ccd0d4;
+}
+
+.cal-rdv-nav-tabs .nav-tab {
+    margin: 0;
+    padding: 8px 15px;
+    background: #f1f1f1;
+    border: 1px solid #ccd0d4;
+    border-bottom: none;
+    margin-right: 5px;
+    margin-bottom: -1px;
+    text-decoration: none;
+    color: #2271b1;
+    font-size: 14px;
+    line-height: 1.71428571;
+    font-weight: 400;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.cal-rdv-nav-tabs .nav-tab:hover {
+    background: #f8f9f9;
+    border-color: #999;
+    color: #135e96;
+}
+
+.cal-rdv-nav-tabs .nav-tab-active,
+.cal-rdv-nav-tabs .nav-tab-active:hover {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+    color: #1d2327;
+    font-weight: 600;
+}
+
+/* Contenu des onglets */
+.cal-rdv-tab-content {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    border-top: none;
+    padding: 20px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Sections de paramètres */
+.cal-rdv-settings-section {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.cal-rdv-settings-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cal-rdv-settings-section h2 {
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    font-size: 18px;
+    font-weight: 500;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+/* Tableau des paramètres */
+.cal-rdv-settings-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0;
+}
+
+.cal-rdv-settings-section th {
+    width: 200px;
+    padding: 15px 10px 15px 0;
+    text-align: left;
+    vertical-align: top;
+    font-weight: 400;
+}
+
+.cal-rdv-settings-section td {
+    padding: 10px 0;
+}
+
+.cal-rdv-settings-section input[type="text"],
+.cal-rdv-settings-section input[type="email"],
+.cal-rdv-settings-section input[type="number"],
+.cal-rdv-settings-section input[type="url"],
+.cal-rdv-settings-section input[type="password"],
+.cal-rdv-settings-section select,
+.cal-rdv-settings-section textarea {
+    width: 100%;
+    max-width: 500px;
+}
+
+.cal-rdv-settings-section input[type="number"].small-text {
+    width: 65px;
+    margin-right: 5px;
+}
+
+.cal-rdv-settings-section input[type="checkbox"] {
+    margin-top: 1px;
+}
+
+.cal-rdv-settings-section textarea {
+    min-height: 100px;
+}
+
+/* Pied de page des paramètres */
+.cal-rdv-settings-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f1;
+    text-align: right;
+}
+
+.cal-rdv-settings-footer .button {
+    margin-left: 8px;
+}
+
+/* Aide contextuelle */
+.cal-rdv-help-tip {
+    color: #666;
+    display: inline-block;
+    font-size: 1.1em;
+    font-style: normal;
+    height: 16px;
+    line-height: 16px;
+    position: relative;
+    vertical-align: middle;
+    width: 16px;
+    margin-left: 5px;
+}
+
+.cal-rdv-help-tip:hover {
+    color: #2271b1;
+    cursor: help;
+}
+
+/* Modale d'aide */
+.cal-rdv-modal {
+    display: none;
+    position: fixed;
+    z-index: 100000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.cal-rdv-modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 0;
+    border: 1px solid #ddd;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    animation: cal-rdv-modal-fadein 0.3s;
+}
+
+@keyframes cal-rdv-modal-fadein {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.cal-rdv-modal-header {
+    padding: 15px 20px;
+    background: #f8f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+.cal-rdv-modal-header h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cal-rdv-modal-close {
+    color: #a7aaad;
+    float: right;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0 5px;
+}
+
+.cal-rdv-modal-close:hover,
+.cal-rdv-modal-close:focus {
+    color: #2271b1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.cal-rdv-modal-body {
+    padding: 20px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.cal-rdv-modal-footer {
+    padding: 15px 20px;
+    background: #f8f9f9;
+    border-top: 1px solid #ddd;
+    text-align: right;
+}
+
+/* Styles réactifs */
+@media screen and (max-width: 782px) {
+    .cal-rdv-settings-section th,
+    .cal-rdv-settings-section td {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    .cal-rdv-settings-section th {
+        padding-bottom: 5px;
+    }
+    
+    .cal-rdv-settings-section input[type="text"],
+    .cal-rdv-settings-section input[type="email"],
+    .cal-rdv-settings-section input[type="number"],
+    .cal-rdv-settings-section input[type="url"],
+    .cal-rdv-settings-section input[type="password"],
+    .cal-rdv-settings-section select,
+    .cal-rdv-settings-section textarea {
+        max-width: 100%;
+    }
+    
+    .cal-rdv-modal-content {
+        width: 95%;
+        margin: 5% auto;
+    }
+}
+
+/* Styles pour les champs avec icônes */
+.cal-rdv-input-with-icon {
+    position: relative;
+    display: inline-block;
+    max-width: 500px;
+    width: 100%;
+}
+
+.cal-rdv-input-with-icon input {
+    padding-left: 30px;
+}
+
+.cal-rdv-input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8f94;
+    pointer-events: none;
+}
+
+/* Styles pour les boutons d'action */
+.cal-rdv-action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.cal-rdv-action-button .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* Styles pour les cartes de paramètres */
+.cal-rdv-settings-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.cal-rdv-settings-card {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.cal-rdv-settings-card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #1d2327;
+}
+
+.cal-rdv-settings-card p {
+    margin: 0 0 15px;
+    color: #646970;
+}
+
+.cal-rdv-settings-card .button {
+    margin-top: 10px;
+}

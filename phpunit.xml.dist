@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+         backupGlobals="false"
+         colors="true"
+         convertErrorsToExceptions="true"
+         convertNoticesToExceptions="true"
+         convertWarningsToExceptions="true"
+         >
+    <testsuites>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/unit</directory>
+        </testsuite>
+        <testsuite name="Integration">
+            <directory suffix="Test.php">./tests/integration</directory>
+        </testsuite>
+        <testsuite name="Performance">
+            <directory suffix="Test.php">./tests/performance</directory>
+        </testsuite>
+        <testsuite name="Security">
+            <directory suffix="Test.php">./tests/security</directory>
+        </testsuite>
+        <testsuite name="Accessibility">
+            <directory suffix="Test.php">./tests/accessibility</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="coverage" title="Calendrier RDV - Couverture de code"/>
+        <log type="coverage-clover" target="coverage/coverage.xml"/>
+        <log type="junit" target="coverage/junit.xml"/>
+    </logging>
+    <php>
+        <const name="WP_TESTS_CONFIG_FILE_PATH" value="/chemin/vers/wp-tests-config.php"/>
+        <const name="WP_TESTS_DOMAIN" value="example.org"/>
+        <const name="WP_TESTS_EMAIL" value="admin@example.org"/>
+        <const name="WP_TESTS_TITLE" value="Test Blog"/>
+        <const name="WP_PHP_BINARY" value="php"/>
+    </php>
+</phpunit>

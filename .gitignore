@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+vendor/
+package-lock.json
+composer.lock
+
+# WordPress core
+wordpress/
+wp-config.php
+wp-content/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Testing
+/coverage/
+.phpunit.result.cache
+
+# Build files
+/dist/
+/build/
+
+# WordPress specific
+*.mo
+*.pot
+
+# Local development
+/.wp-env.json
+/.wp-env.override.json
+
+# Cypress
+/cypress/videos/
+/cypress/screenshots/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

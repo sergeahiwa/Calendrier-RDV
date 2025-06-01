@@ -1,0 +1,3 @@
+Ce fichier est un test de connexion SFTP.
+Date du test : 08/05/2025 03:24  
+pharmacie
