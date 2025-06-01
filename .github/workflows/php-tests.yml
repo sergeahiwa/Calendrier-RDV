@@ -1,0 +1,119 @@
+name: PHP Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    name: Run PHPUnit Tests
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: [ '7.4', '8.0', '8.1' ]
+        wordpress: [ 'latest', '6.2' ]
+        include:
+          - php: '7.4'
+            experimental: false
+          - php: '8.0'
+            experimental: false
+          - php: '8.1'
+            experimental: false
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: ${{ matrix.php }}
+        extensions: mbstring, dom, fileinfo, mysql, curl, gd, intl, json, mbstring, xml, zip
+        coverage: xdebug
+
+    - name: Setup WordPress test environment
+      uses: wordpress/wordpress-tests-cli@v2
+      with:
+        version: ${{ matrix.wordpress }}
+        db-name: wordpress_test
+        db-user: root
+        db-pass: root
+        db-host: 127.0.0.1
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16.x'
+
+    - name: Install dependencies
+      run: |
+        composer install --prefer-dist --no-progress --no-suggest
+        npm install
+
+    - name: Run PHPUnit tests
+      run: |
+        mkdir -p tests/logs
+        ./vendor/bin/phpunit --coverage-clover=coverage.xml --log-junit=junit.xml
+
+    - name: Upload code coverage to Codecov
+      if: matrix.experimental == false
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        flags: unittests
+        name: codecov-umbrella
+        fail_ci_if_error: false
+
+    - name: Upload test results
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: test-results
+        path: |
+          junit.xml
+          tests/logs/*.log
+
+  phpcs:
+    name: PHP_CodeSniffer
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, dom, fileinfo
+        tools: cs2pr
+
+    - name: Install dependencies
+      run: |
+        composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run PHP_CodeSniffer
+      run: |
+        ./vendor/bin/phpcs --standard=phpcs.xml --report=checkstyle | cs2pr --graceful-warnings
+
+  phpstan:
+    name: PHPStan
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.1'
+        extensions: mbstring, dom, fileinfo, intl
+
+    - name: Install dependencies
+      run: |
+        composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run PHPStan
+      run: ./vendor/bin/phpstan analyse src tests
