@@ -1,0 +1,272 @@
+/* Styles de base pour l'administration */
+.wrap.calendrier-rdv {
+    margin: 20px 0 0 0;
+    max-width: 1200px;
+}
+
+/* Grille */
+.cal-rdv-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px 20px;
+}
+
+.cal-rdv-col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding: 0 15px;
+}
+
+.cal-rdv-col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding: 0 15px;
+}
+
+.cal-rdv-col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding: 0 15px;
+}
+
+/* Cartes */
+.cal-rdv-card {
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.cal-rdv-card h2 {
+    margin: 0 0 20px 0;
+    padding: 0 0 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.cal-rdv-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Grille de statistiques */
+.cal-rdv-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    margin: 0 -5px;
+}
+
+.cal-rdv-stat-card {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.cal-rdv-stat-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cal-rdv-stat-value {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2271b1;
+    margin-bottom: 5px;
+}
+
+.cal-rdv-stat-label {
+    font-size: 13px;
+    color: #646970;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Tableaux */
+.cal-rdv-table-responsive {
+    overflow-x: auto;
+    margin: 0 -20px -20px;
+    width: calc(100% + 40px);
+}
+
+.cal-rdv-table-responsive table {
+    margin: 0;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.cal-rdv-table-responsive th,
+.cal-rdv-table-responsive td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.cal-rdv-table-responsive th {
+    font-weight: 600;
+    background-color: #f6f7f7;
+}
+
+/* Statuts */
+.cal-rdv-status {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.cal-rdv-status-pending {
+    background-color: #f0c33c;
+    color: #1d2327;
+}
+
+.cal-rdv-status-confirmed {
+    background-color: #00a32a;
+    color: #fff;
+}
+
+.cal-rdv-status-cancelled {
+    background-color: #d63638;
+    color: #fff;
+}
+
+/* Actions */
+.cal-rdv-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.cal-rdv-actions .button {
+    padding: 0 5px;
+    height: 28px;
+    width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cal-rdv-actions .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+/* État vide */
+.cal-rdv-empty-state {
+    padding: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border: 1px dashed #ddd;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+.cal-rdv-empty-state p {
+    margin: 0 0 15px 0;
+    color: #646970;
+}
+
+/* Aide rapide */
+.cal-rdv-help-section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.cal-rdv-help-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.cal-rdv-help-section h3 {
+    margin: 0 0 8px 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.cal-rdv-help-section p {
+    margin: 0;
+    color: #646970;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* Statut du système */
+.cal-rdv-system-status {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cal-rdv-system-status li {
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.cal-rdv-system-status li:last-child {
+    border-bottom: none;
+}
+
+.cal-rdv-status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.cal-rdv-status-success {
+    background-color: #00a32a;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .cal-rdv-col-8,
+    .cal-rdv-col-4 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    
+    .cal-rdv-stats-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media screen and (max-width: 782px) {
+    .cal-rdv-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cal-rdv-card {
+        padding: 15px;
+    }
+    
+    .cal-rdv-table-responsive {
+        margin: 0 -15px -15px;
+        width: calc(100% + 30px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cal-rdv-stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cal-rdv-actions {
+        flex-wrap: wrap;
+    }
+}

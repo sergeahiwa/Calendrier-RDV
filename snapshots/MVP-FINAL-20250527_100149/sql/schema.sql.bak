@@ -1,0 +1,154 @@
+-- =============================================
+-- Fichier : schema.sql
+-- Description : Schéma de la base de données pour le plugin Calendrier RDV
+-- Auteur : SAN Digital Solutions
+-- =============================================
+
+-- Désactiver la vérification des clés étrangères temporairement
+SET FOREIGN_KEY_CHECKS = 0;
+
+-- Table des prestataires
+CREATE TABLE IF NOT EXISTS `{PREFIX}prestataires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `telephone` varchar(50) DEFAULT NULL,
+  `specialite` varchar(255) DEFAULT NULL,
+  `actif` tinyint(1) NOT NULL DEFAULT '1',
+  `date_creation` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_modification` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `email` (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des services
+CREATE TABLE IF NOT EXISTS `{PREFIX}services` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nom` varchar(255) NOT NULL,
+  `duree` int(11) NOT NULL COMMENT 'Durée en minutes',
+  `prix` decimal(10,2) DEFAULT NULL,
+  `description` text,
+  `actif` tinyint(1) NOT NULL DEFAULT '1',
+  `couleur` varchar(7) DEFAULT '#3a87ad',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des rendez-vous
+CREATE TABLE IF NOT EXISTS `{PREFIX}reservations` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `reference` varchar(20) NOT NULL,
+  `client_nom` varchar(255) NOT NULL,
+  `client_email` varchar(255) NOT NULL,
+  `client_telephone` varchar(50) DEFAULT NULL,
+  `prestataire_id` int(11) NOT NULL,
+  `service_id` int(11) NOT NULL,
+  `date_rdv` date NOT NULL,
+  `heure_debut` time NOT NULL,
+  `heure_fin` time NOT NULL,
+  `statut` enum('en_attente','confirme','annule','termine','absent') NOT NULL DEFAULT 'en_attente',
+  `notes` text,
+  `rappel_envoye` tinyint(1) NOT NULL DEFAULT '0',
+  `token` varchar(64) NOT NULL,
+  `date_creation` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date_modification` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `reference` (`reference`),
+  KEY `prestataire_id` (`prestataire_id`),
+  KEY `service_id` (`service_id`),
+  KEY `date_rdv` (`date_rdv`),
+  KEY `statut` (`statut`),
+  KEY `client_email` (`client_email`),
+  CONSTRAINT `fk_reservation_prestataire` FOREIGN KEY (`prestataire_id`) REFERENCES `{PREFIX}prestataires` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `fk_reservation_service` FOREIGN KEY (`service_id`) REFERENCES `{PREFIX}services` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des horaires d'ouverture
+CREATE TABLE IF NOT EXISTS `{PREFIX}horaires` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `jour` enum('lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche') NOT NULL,
+  `ouverture_matin` time DEFAULT NULL,
+  `fermeture_matin` time DEFAULT NULL,
+  `ouverture_apres_midi` time DEFAULT NULL,
+  `fermeture_apres_midi` time DEFAULT NULL,
+  `est_ferie` tinyint(1) NOT NULL DEFAULT '0',
+  `prestataire_id` int(11) DEFAULT NULL COMMENT 'NULL pour les horaires par défaut',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `jour_prestataire` (`jour`,`prestataire_id`),
+  KEY `prestataire_id` (`prestataire_id`),
+  CONSTRAINT `fk_horaire_prestataire` FOREIGN KEY (`prestataire_id`) REFERENCES `{PREFIX}prestataires` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des jours fériés
+CREATE TABLE IF NOT EXISTS `{PREFIX}jours_feries` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `date` date NOT NULL,
+  `nom` varchar(255) NOT NULL,
+  `recurrent` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1 si le jour férié est annuel',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `date` (`date`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des logs
+CREATE TABLE IF NOT EXISTS `{PREFIX}calrdv_logs` (
+  `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `niveau` enum('debug','info','avertissement','erreur','critique') NOT NULL,
+  `message` text NOT NULL,
+  `contexte` longtext,
+  `utilisateur_id` int(11) DEFAULT NULL,
+  `adresse_ip` varchar(45) DEFAULT NULL,
+  `user_agent` varchar(255) DEFAULT NULL,
+  `date_creation` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`),
+  KEY `niveau` (`niveau`),
+  KEY `utilisateur_id` (`utilisateur_id`),
+  KEY `date_creation` (`date_creation`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Table des paramètres
+CREATE TABLE IF NOT EXISTS `{PREFIX}calrdv_parametres` (
+  `cle` varchar(100) NOT NULL,
+  `valeur` longtext,
+  `type` enum('string','integer','float','boolean','json','serialized') NOT NULL DEFAULT 'string',
+  `groupe` varchar(50) DEFAULT 'general',
+  `description` text,
+  `date_modification` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`cle`),
+  KEY `groupe` (`groupe`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- Données initiales
+INSERT IGNORE INTO `{PREFIX}horaires` (`jour`, `ouverture_matin`, `fermeture_matin`, `ouverture_apres_midi`, `fermeture_apres_midi`, `est_ferie`) VALUES
+('lundi', '09:00:00', '12:00:00', '14:00:00', '18:00:00', 0),
+('mardi', '09:00:00', '12:00:00', '14:00:00', '18:00:00', 0),
+('mercredi', '09:00:00', '12:00:00', '14:00:00', '18:00:00', 0),
+('jeudi', '09:00:00', '12:00:00', '14:00:00', '18:00:00', 0),
+('vendredi', '09:00:00', '12:00:00', '14:00:00', '17:00:00', 0),
+('samedi', NULL, NULL, NULL, NULL, 1),
+('dimanche', NULL, NULL, NULL, NULL, 1);
+
+-- Jours fériés français
+INSERT IGNORE INTO `{PREFIX}jours_feries` (`date`, `nom`, `recurrent`) VALUES
+('2025-01-01', 'Jour de l\'An', 1),
+('2025-04-21', 'Lundi de Pâques', 1),
+('2025-05-01', 'Fête du Travail', 1),
+('2025-05-08', 'Victoire 1945', 1),
+('2025-05-29', 'Jeudi de l\'Ascension', 1),
+('2025-06-09', 'Lundi de Pentecôte', 1),
+('2025-07-14', 'Fête Nationale', 1),
+('2025-08-15', 'Assomption', 1),
+('2025-11-01', 'Toussaint', 1),
+('2025-11-11', 'Armistice 1918', 1),
+('2025-12-25', 'Noël', 1);
+
+-- Paramètres par défaut
+INSERT IGNORE INTO `{PREFIX}calrdv_parametres` (`cle`, `valeur`, `type`, `groupe`, `description`) VALUES
+('duree_rdv_defaut', '30', 'integer', 'rdv', 'Durée par défaut d\'un rendez-vous en minutes'),
+('delai_rappel', '24', 'integer', 'notifications', 'Délai avant le RDV pour l\'envoi du rappel (en heures)'),
+('heure_ouverture', '09:00', 'string', 'horaires', 'Heure d\'ouverture par défaut'),
+('heure_fermeture', '18:00', 'string', 'horaires', 'Heure de fermeture par défaut'),
+('pauses_obligatoires', '1', 'boolean', 'rdv', 'Activer les pauses obligatoires entre les RDV'),
+('duree_pause', '15', 'integer', 'rdv', 'Durée des pauses entre RDV (en minutes)'),
+('jours_fermeture', '6,0', 'string', 'horaires', 'Jours de fermeture (0=dimanche, 1=lundi, etc.)');
+
+-- Réactiver la vérification des clés étrangères
+SET FOREIGN_KEY_CHECKS = 1;

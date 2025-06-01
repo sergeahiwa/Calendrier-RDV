@@ -1,0 +1,537 @@
+/* Style de base pour le conteneur principal */
+.calendrier-rdv-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #333;
+}
+
+/* En-tête du formulaire */
+.calendrier-rdv-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.calendrier-rdv-header h1 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.calendrier-rdv-header .subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Style des étapes */
+.booking-step {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    margin-right: 1rem;
+    font-size: 0.9rem;
+}
+
+.step-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+/* Grille des services */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.service-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-color: #3498db;
+}
+
+.service-card.selected {
+    border-color: #3498db;
+    background-color: #f8fafc;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+
+.service-card h3 {
+    margin: 0 0 0.5rem;
+    color: #2c3e50;
+    font-size: 1.2rem;
+}
+
+.service-card .duration {
+    color: #7f8c8d;
+    margin: 0.3rem 0;
+    font-size: 0.9rem;
+}
+
+.service-card .price {
+    font-weight: bold;
+    color: #27ae60;
+    font-size: 1.1rem;
+    margin: 0.5rem 0 0;
+}
+
+/* Liste des prestataires */
+.providers-list {
+    margin-bottom: 2rem;
+}
+
+.provider-card {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.provider-card:hover {
+    border-color: #3498db;
+    background-color: #f8fafc;
+}
+
+.provider-card.selected {
+    border-color: #3498db;
+    background-color: #f0f7ff;
+}
+
+.provider-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    border: 2px solid #e0e0e0;
+}
+
+.provider-info h4 {
+    margin: 0 0 0.3rem;
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.provider-specialty {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+.provider-rating {
+    color: #f1c40f;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+
+/* Sélection de la date et de l'heure */
+.date-selection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.calendar-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.time-slots-container {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.time-slot {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
+}
+
+.time-slot:hover {
+    background-color: #f8f9fa;
+    border-color: #3498db;
+}
+
+.time-slot.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.time-slot.unavailable {
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Récapitulatif et formulaire */
+.booking-summary {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.booking-summary h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.summary-details p {
+    margin: 0.5rem 0;
+    display: flex;
+}
+
+.summary-details p strong {
+    min-width: 100px;
+    color: #7f8c8d;
+}
+
+/* Champs du formulaire */
+.form-fields {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+textarea.form-control {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.terms-group {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1rem;
+}
+
+.terms-group input[type="checkbox"] {
+    margin-right: 0.8rem;
+    margin-top: 0.3rem;
+}
+
+.terms-group label {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.terms-group a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.terms-group a:hover {
+    text-decoration: underline;
+}
+
+/* Boutons de navigation */
+.step-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ecf0f1;
+}
+
+.btn-prev,
+.btn-next,
+.btn-submit {
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-prev {
+    background-color: #f8f9fa;
+    color: #7f8c8d;
+    border: 1px solid #ddd;
+}
+
+.btn-prev:hover {
+    background-color: #e9ecef;
+}
+
+.btn-next,
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-next:disabled,
+.btn-submit:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.btn-next:not(:disabled):hover,
+.btn-submit:not(:disabled):hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Page de confirmation */
+.confirmation-message {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.confirmation-icon {
+    font-size: 5rem;
+    color: #27ae60;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation-message h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.confirmation-message p {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    margin-bottom: 2rem;
+}
+
+.confirmation-details {
+    background-color: #f8fafc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    text-align: left;
+}
+
+.confirmation-details h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 1.5rem;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.detail-item {
+    margin-bottom: 0.8rem;
+}
+
+.detail-label {
+    display: block;
+    font-weight: 500;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+
+.detail-value {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 1rem;
+}
+
+.confirmation-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.btn-home,
+.btn-print {
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-home {
+    background-color: #3498db;
+    color: white;
+}
+
+.btn-print {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+    border: 1px solid #ddd;
+}
+
+.btn-home:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.btn-print:hover {
+    background-color: #e9ecef;
+}
+
+.confirmation-note {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ecf0f1;
+    color: #7f8c8d;
+    font-size: 0.95rem;
+}
+
+.confirmation-note i {
+    color: #3498db;
+    margin-right: 0.5rem;
+}
+
+/* Messages d'information */
+.loading-text,
+.info-message {
+    color: #7f8c8d;
+    font-style: italic;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Réactivité */
+@media (max-width: 992px) {
+    .date-selection {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .calendrier-rdv-container {
+        padding: 1rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .confirmation-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .btn-home,
+    .btn-print {
+        width: 100%;
+        text-align: center;
+    }
+}

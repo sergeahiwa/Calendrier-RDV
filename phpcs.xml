@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<ruleset name="Calendrier RDV">
+    <description>PHP_CodeSniffer rules for Calendrier RDV</description>
+
+    <!-- Base path: relative to this file -->
+    <file>.</file>
+
+    <!-- Exclude directories -->
+    <exclude-pattern>/vendor/*</exclude-pattern>
+    <exclude-pattern>/node_modules/*</exclude-pattern>
+    <exclude-pattern>/tests/*</exclude-pattern>
+    <exclude-pattern>/*.js</exclude-pattern>
+    <exclude-pattern>/*.css</exclude-pattern>
+
+    <!-- Show progress -->
+    <arg value="p"/>
+
+    <!-- Show sniff codes in all reports -->
+    <arg value="s"/>
+
+    <!-- Include WordPress coding standards -->
+    <rule ref="WordPress">
+        <!-- Exclude some WordPress sniffs that are too strict -->
+        <exclude name="WordPress.Files.FileName"/>
+        <exclude name="WordPress.WP.I18n"/>
+        <exclude name="WordPress.NamingConventions.PrefixAllGlobals"/>
+        <exclude name="WordPress.Security.EscapeOutput"/>
+    </rule>
+
+    <!-- Custom rules -->
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="120"/>
+            <property name="absoluteLineLimit" value="140"/>
+        </properties>
+    </rule>
+
+    <!-- Ignore nonce verification in certain files -->
+    <rule ref="WordPress.Security.NonceVerification">
+        <exclude-pattern>/tests/*</exclude-pattern>
+    </rule>
+
+    <!-- Allow for now, but should be fixed -->
+    <rule ref="WordPress.Security.ValidatedSanitizedInput">
+        <type>warning</type>
+    </rule>
+
+    <!-- Allow for now, but should be fixed -->
+    <rule ref="WordPress.Security.EscapeOutput">
+        <type>warning</type>
+    </rule>
+
+    <!-- Report width -->
+    <arg name="report-width" value="120"/>
+</ruleset>

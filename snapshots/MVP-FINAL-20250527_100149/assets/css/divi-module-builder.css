@@ -1,0 +1,113 @@
+/* Styles spécifiques pour le Builder Divi */
+
+.et-pb-module-calendrier-rdv {
+    position: relative;
+    padding: 20px;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-form {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-form.loading {
+    opacity: 0.5;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-section {
+    margin-bottom: 15px;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #333;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-section select,
+.et-pb-module-calendrier-rdv .calendrier-rdv-section input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-section select:focus,
+.et-pb-module-calendrier-rdv .calendrier-rdv-section input:focus {
+    outline: none;
+    border-color: #2ea3f2;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-submit {
+    width: 100%;
+    padding: 12px;
+    background: #2ea3f2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-submit:hover {
+    background: #2188cc;
+}
+
+/* États de chargement */
+.et-pb-module-calendrier-rdv .calendrier-rdv-loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-error {
+    text-align: center;
+    padding: 20px;
+    color: #dc3232;
+}
+
+/* Styles spécifiques pour les différents styles */
+.et-pb-module-calendrier-rdv.style-default {
+    border: 1px solid #ddd;
+}
+
+.et-pb-module-calendrier-rdv.style-modern {
+    border: 2px solid #2ea3f2;
+    padding: 30px;
+}
+
+.et-pb-module-calendrier-rdv.style-minimal {
+    background: transparent;
+    padding: 15px;
+    border: none;
+}
+
+/* Styles pour les options de personnalisation */
+.et-pb-module-calendrier-rdv[style="modern"] {
+    border: 2px solid #2ea3f2;
+    padding: 30px;
+}
+
+.et-pb-module-calendrier-rdv[style="minimal"] {
+    background: transparent;
+    padding: 15px;
+    border: none;
+}
+
+/* Styles pour les états de validation */
+.et-pb-module-calendrier-rdv .calendrier-rdv-section select:invalid,
+.et-pb-module-calendrier-rdv .calendrier-rdv-section input:invalid {
+    border-color: #dc3232;
+}
+
+.et-pb-module-calendrier-rdv .calendrier-rdv-section select:valid,
+.et-pb-module-calendrier-rdv .calendrier-rdv-section input:valid {
+    border-color: #2ea3f2;
+}

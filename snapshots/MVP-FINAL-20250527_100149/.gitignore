@@ -1,0 +1,195 @@
+# Dependencies
+/vendor/
+/node_modules/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+
+# WordPress
+wp-config.php
+wp-content/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test artifacts
+/coverage/
+/clover.xml
+/junit.xml
+/phpunit.xml
+/phpunit.simple.xml
+/phpunit.integration.xml
+
+# Build artifacts
+/build/
+/dist/
+*.zip
+
+# Local development
+*.local
+
+# Debug logs
+debug.log
+
+# Temp files
+/tmp/
+/temp/
+
+# PHPUnit
+/phpunit.xml.dist
+/phpunit-result.xml
+
+# Code coverage
+/coverage/
+/clover.xml
+/clover.xml.dist
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# WordPress specific
+wp-admin/
+wp-includes/
+wp-*.php
+index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+# Plugin specific
+assets/build/
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+cypress/fixtures/example.json
+cypress/.DS_Store
+
+# Cypress test results
+cypress/results/
+
+# Cypress environment variables
+cypress.env.json
+
+# Cypress cache
+.cypress-cache/
+
+# Cypress binary cache
+Cypress/
+
+# Cypress test results in JUnit format
+cypress/test-results/
+
+# Cypress screenshots on failure
+cypress/screenshots/
+
+# Cypress videos
+cypress/videos/
+!assets/build/.gitkeep
+
+# Test environment
+/tests/_output/
+/tests/_support/_generated/
+
+# Local development
+.local-*
+
+# Logs
+*.log
+
+# Cache
+.cache/
+
+# Dependency directories
+node_modules/
+vendor/
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Test coverage
+/coverage/
+/clover.xml
+
+# Build files
+/build/
+
+# Local development
+.env
+.env.*
+!.env.example
+
+# Debug
+*.log
+
+# Testing
+/phpunit.xml
+/phpunit.xml.dist
+
+# IDE
+.idea/
+.vscode/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

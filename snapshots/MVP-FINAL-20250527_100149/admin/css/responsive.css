@@ -1,0 +1,155 @@
+/* Design responsive */
+
+/* Navbar */
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+    
+    .navbar-brand {
+        margin-left: 1rem;
+    }
+    
+    .navbar-collapse {
+        padding: 1rem;
+    }
+}
+
+/* Cartes */
+@media (max-width: 767.98px) {
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .card-header {
+        padding: 1rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+
+/* Tableaux */
+@media (max-width: 767.98px) {
+    .table-responsive {
+        margin-bottom: 1rem;
+    }
+    
+    .table {
+        font-size: 0.9rem;
+    }
+}
+
+/* Filtres */
+@media (max-width: 767.98px) {
+    .filters-container {
+        margin-bottom: 1rem;
+    }
+    
+    .filters-row {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Dropdowns */
+@media (max-width: 767.98px) {
+    .dropdown-menu {
+        width: 100%;
+    }
+}
+
+/* Modals */
+@media (max-width: 767.98px) {
+    .modal-dialog {
+        margin: 0.5rem;
+    }
+    
+    .modal-content {
+        border-radius: 0.5rem;
+    }
+}
+
+/* Boutons */
+@media (max-width: 767.98px) {
+    .btn-group {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Statistiques */
+@media (max-width: 767.98px) {
+    .stats-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Graphiques */
+@media (max-width: 767.98px) {
+    .chart-container {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Notifications */
+@media (max-width: 767.98px) {
+    .notification-badge {
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+    
+    .notification-dropdown {
+        width: 100%;
+    }
+}
+
+/* Alertes */
+@media (max-width: 767.98px) {
+    .alert {
+        margin: 0.5rem;
+        padding: 0.75rem;
+    }
+}
+
+/* Formulaires */
+@media (max-width: 767.98px) {
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    .form-control {
+        font-size: 0.9rem;
+    }
+}
+
+/* Icônes */
+@media (max-width: 767.98px) {
+    .fa-2x {
+        font-size: 1.5rem;
+    }
+    
+    .fa-3x {
+        font-size: 2rem;
+    }
+}
+
+/* Animations */
+@media (max-width: 767.98px) {
+    .fade-in {
+        animation: fadeIn 0.3s ease-out;
+    }
+    
+    .slide-in {
+        animation: slideIn 0.3s ease-out;
+    }
+}
+
+/* États de chargement */
+@media (max-width: 767.98px) {
+    .loading-state {
+        margin: 1rem auto;
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,225 @@
+/* Style de base pour le formulaire de rendez-vous */
+.calendrier-rdv-container {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* En-tête */
+.calendrier-rdv-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.calendrier-rdv-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+/* Grille principale */
+.calendrier-rdv-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Section de sélection */
+.selection-section {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Champs de formulaire */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Calendrier */
+.calendar-container {
+    grid-column: 1 / -1;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Bouton de soumission */
+.btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Styles pour les créneaux horaires */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+    min-height: 60px;
+}
+
+.time-slot {
+    padding: 12px 8px;
+    text-align: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.time-slot:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-slot.selected {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.time-slot.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #f1f1f1;
+    text-decoration: line-through;
+}
+
+/* Styles pour le chargement */
+.loading {
+    text-align: center;
+    padding: 15px;
+    color: #666;
+    font-style: italic;
+}
+
+/* Messages */
+.calendrier-rdv-message {
+    margin: 15px 0;
+    padding: 12px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Animation de chargement */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .calendrier-rdv-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .calendar-container {
+        order: -1;
+    }
+    
+    .selection-section {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .calendrier-rdv-container {
+        padding: 10px;
+    }
+    
+    .selection-section {
+        padding: 15px;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
+
+/* Amélioration de l'accessibilité */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Amélioration de la lisibilité sur les écrans tactiles */
+@media (hover: none) {
+    .time-slot {
+        padding: 15px 8px;
+    }
+    
+    .btn-submit {
+        padding: 15px 24px;
+    }
+}

@@ -1,0 +1,97 @@
+/* Animations subtiles */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { transform: translateX(-20px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Animations pour les cartes */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Animations pour les notifications */
+.notification-badge {
+    animation: pulse 2s infinite;
+}
+
+.notification-item {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Animations pour les boutons */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Animations pour les modals */
+.modal-content {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animations pour les tableaux */
+.table-hover tbody tr:hover {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Animations pour les badges */
+.badge {
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    transform: scale(1.1);
+}
+
+/* Animations pour les dropdowns */
+.dropdown-menu {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animations pour les tooltips */
+.tooltip {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Animations pour les alertes */
+.alert {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Animations pour les loader */
+.spinner-border {
+    animation: spinner-border 0.75s linear infinite;
+}
+
+/* Animations personnalisées */
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.slide-in {
+    animation: slideIn 0.5s ease-out;
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}

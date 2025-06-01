@@ -1,0 +1,10 @@
+{
+  "appointment_confirmed_title": "Rendez-vous Confirmé",
+  "appointment_confirmed_body": "Votre rendez-vous pour {{service}} avec {{provider}} le {{date}} à {{time}} est confirmé.",
+  "appointment_cancelled_title": "Rendez-vous Annulé",
+  "appointment_cancelled_body": "Votre rendez-vous pour {{service}} avec {{provider}} le {{date}} à {{time}} a été annulé.",
+  "appointment_reminder_title": "Rappel de Rendez-vous",
+  "appointment_reminder_body": "Ceci est un rappel pour votre rendez-vous pour {{service}} avec {{provider}} le {{date}} à {{time}}.",
+  "error_sending": "Erreur lors de l'envoi de la notification.",
+  "success_sent": "Notification envoyée avec succès."
+}

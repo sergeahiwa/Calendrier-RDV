@@ -1,0 +1,42 @@
+{
+  "app": {
+    "name": "Calendrier RDV",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue",
+    "success": "Opération réussie",
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour"
+  },
+  "calendar": {
+    "today": "Aujourd'hui",
+    "day": "Jour",
+    "week": "Semaine",
+    "month": "Mois",
+    "previous": "Précédent",
+    "next": "Suivant",
+    "no_events": "Aucun événement prévu"
+  },
+  "appointment": {
+    "title": "Rendez-vous",
+    "new": "Nouveau rendez-vous",
+    "edit": "Modifier le rendez-vous",
+    "delete": "Supprimer le rendez-vous",
+    "confirm_delete": "Êtes-vous sûr de vouloir supprimer ce rendez-vous ?",
+    "status": {
+      "pending": "En attente",
+      "confirmed": "Confirmé",
+      "cancelled": "Annulé",
+      "completed": "Terminé"
+    }
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "email": "Veuillez entrer une adresse email valide",
+    "phone": "Veuillez entrer un numéro de téléphone valide",
+    "date": "Veuillez entrer une date valide",
+    "time": "Veuillez entrer une heure valide"
+  }
+}

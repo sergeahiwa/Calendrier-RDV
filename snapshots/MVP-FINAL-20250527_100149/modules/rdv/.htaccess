@@ -1,0 +1,22 @@
+# Bloque l'accès direct à ce dossier
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule ^ - [F]
+</IfModule>
+
+# Désactive l'affichage du contenu du répertoire
+Options -Indexes
+
+# Empêche l'exécution de fichiers dans ce dossier
+<FilesMatch "\.(php|php[0-9]|phtml|pl|py|jsp|asp|sh|cgi)$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Refuser l'accès à tous les fichiers
+<Files *>
+  Order deny,allow
+  Deny from all
+</Files>

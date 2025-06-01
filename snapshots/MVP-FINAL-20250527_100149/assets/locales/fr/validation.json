@@ -1,0 +1,8 @@
+{
+  "min_length": "Ce champ doit contenir au moins {{count}} caractères.",
+  "max_length": "Ce champ ne peut pas dépasser {{count}} caractères.",
+  "invalid_format": "Format invalide.",
+  "select_service": "Veuillez sélectionner un service.",
+  "select_provider": "Veuillez sélectionner un prestataire.",
+  "select_date_time": "Veuillez sélectionner une date et une heure."
+}

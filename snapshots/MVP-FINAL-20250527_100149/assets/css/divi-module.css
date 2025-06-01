@@ -1,0 +1,109 @@
+/* Styles du module Divi pour le frontend */
+
+.calendrier-rdv-module {
+    background: var(--et-global-color-white);
+    border-radius: var(--et-global-radius);
+    padding: 2rem;
+    box-shadow: var(--et-global-shadow);
+    transition: all 0.3s ease;
+}
+
+.calendrier-rdv-module.style-default {
+    border: 1px solid var(--et-global-color-light-gray);
+}
+
+.calendrier-rdv-module.style-modern {
+    border: 2px solid var(--calendrier-rdv-primary);
+    padding: 2.5rem;
+}
+
+.calendrier-rdv-module.style-minimal {
+    background: transparent;
+    padding: 1.5rem;
+    border: none;
+}
+
+.calendrier-rdv-title {
+    color: var(--et-global-color-heading);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.calendrier-rdv-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.calendrier-rdv-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.calendrier-rdv-section label {
+    color: var(--et-global-color-heading);
+    font-weight: 500;
+}
+
+.calendrier-rdv-section select,
+.calendrier-rdv-section input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--et-global-color-light-gray);
+    border-radius: var(--et-global-radius);
+    background: var(--et-global-color-white);
+    color: var(--et-global-color-heading);
+    transition: all 0.3s ease;
+}
+
+.calendrier-rdv-section select:focus,
+.calendrier-rdv-section input:focus {
+    outline: none;
+    border-color: var(--calendrier-rdv-primary);
+    box-shadow: 0 0 0 2px rgba(var(--calendrier-rdv-primary-rgb), 0.2);
+}
+
+.calendrier-rdv-submit {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--calendrier-rdv-primary);
+    color: var(--et-global-color-white);
+    border: none;
+    border-radius: var(--et-global-radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.calendrier-rdv-submit:hover {
+    background: var(--calendrier-rdv-primary-dark);
+    transform: translateY(-1px);
+}
+
+.calendrier-rdv-loading,
+.calendrier-rdv-error {
+    text-align: center;
+    padding: 2rem;
+    color: var(--et-global-color-heading);
+}
+
+.calendrier-rdv-error {
+    color: var(--et-global-color-error);
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+    .calendrier-rdv-module {
+        padding: 1.5rem;
+    }
+
+    .calendrier-rdv-title {
+        font-size: 1.25rem;
+    }
+
+    .calendrier-rdv-section select,
+    .calendrier-rdv-section input {
+        padding: 0.5rem;
+    }
+}

@@ -1,0 +1,62 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+    
+    # Configuration de base
+    phpVersion: 70400
+    checkMissingIterableValueType: true
+    
+    # Exclure certains dossiers
+    excludePaths:
+        - %rootDir%/vendor/*
+        - %rootDir%/node_modules/*
+        - %rootDir%/*.js
+        - %rootDir%/*.css
+    
+    # Configuration WordPress
+    bootstrapFiles:
+        - %currentWorkingDirectory%/tests/bootstrap.php
+    
+    # Paramètres spécifiques
+    reportUnmatchedIgnoredErrors: false
+    
+    # Ignorer certaines erreurs courantes
+    ignoreErrors:
+        - '#Call to an undefined method [A-Za-z0-9_\\]+::[a-zA-Z0-9_]+()#'
+        - '#Method [A-Za-z0-9_\\]+::[a-zA-Z0-9_]+() has no return typehint specified#'
+        - '#Property [A-Za-z0-9_\\]+::\$[a-zA-Z0-9_]+ has no typehint specified#'
+        - '#Parameter \$[a-zA-Z0-9_]+ of method [A-Za-z0-9_\\]+::[a-zA-Z0-9_]+\(\) has no typehint specified#'
+    
+    # Configuration des extensions
+    scanFiles:
+        - %currentWorkingDirectory%/vendor/php-stubs/wordpress-stubs/wordpress-stubs.php
+    
+    # Configuration spécifique à WordPress
+    dynamicConstantNames:
+        - WP_DEBUG
+        - WP_CONTENT_DIR
+        - WP_PLUGIN_DIR
+        - WPMU_PLUGIN_DIR
+        - WPINC
+        - TEMPLATEPATH
+        - STYLESHEETPATH
+        - ADMIN_DIR
+        - WP_DEFAULT_THEME
+    
+    # Configuration des rapports
+    reportUnmatchedIgnoredErrors: false
+    
+    # Configuration des règles
+    checkMissingTypehints: true
+    checkMissingIterableValueType: true
+    checkMissingVarAnnotation: true
+    checkMissingPropertyTypehint: true
+    checkMissingReturnTypehint: true
+    checkMissingParameterTypehint: true
+    checkMissingClosureReturnType: true
+    checkMissingPropertyType: true
+    checkMissingMethodReturnType: true
+    checkMissingParameterType: true
+    checkMissingClosureParamType: true

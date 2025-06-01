@@ -1,0 +1,81 @@
+# Protection globale du site
+Options -Indexes
+ServerSignature Off
+
+# Protection XSS et clickjacking
+<IfModule mod_headers.c>
+  Header set X-XSS-Protection "1; mode=block"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Pour les sites en HTTPS uniquement
+  # Header set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
+
+# Restriction d'accès aux fichiers sensibles
+<FilesMatch "^(\.htaccess|\.htpasswd|\.git|\.env|\.env\.example|config\.php|email_config\.php)">
+  Order Allow,Deny
+  Deny from all
+</FilesMatch>
+
+# Protection spécifique du fichier .env
+<Files ~ "\.env$">
+  Order allow,deny
+  Deny from all
+</Files>
+
+# Protection du dossier admin
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  
+  # Redirection vers HTTPS (à décommenter si votre site est en HTTPS)
+  # RewriteCond %{HTTPS} off
+  # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+  # Protection de l'accès direct aux fichiers PHP dans certains dossiers
+  RewriteCond %{REQUEST_URI} ^/includes/.*\.php$ [OR]
+  RewriteCond %{REQUEST_URI} ^/cron/.*\.php$ [OR]
+  RewriteCond %{REQUEST_URI} ^/rdv-handler/.*\.php$
+  RewriteRule .* - [F,L]
+</IfModule>
+
+# Protection de l'accès aux dossiers sensibles
+<IfModule mod_authz_core.c>
+  <DirectoryMatch "^\./(\.git|\.vscode|tests|sql)/">
+    Require all denied
+  </DirectoryMatch>
+</IfModule>
+
+# Sécurité PHP supplémentaire
+<IfModule mod_php7.c>
+  php_flag display_errors off
+  php_flag log_errors on
+  php_value error_log "logs/php_errors.log"
+  php_flag allow_url_fopen off
+  php_flag allow_url_include off
+  php_flag expose_php off
+</IfModule>
+
+# Gestion du cache pour améliorer les performances
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/jpg "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresDefault "access plus 1 week"
+</IfModule>
+
+# Protection contre les injections SQL et XSS
+<IfModule mod_rewrite.c>
+  RewriteCond %{QUERY_STRING} [^a-z0-9-_\.=&]+ [NC,OR]
+  RewriteCond %{QUERY_STRING} \bon[a-z]+= [NC,OR]
+  RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3E) [NC,OR]
+  RewriteCond %{QUERY_STRING} (;|'|"|%27|%22).*(union|select|insert|drop|update|md5|benchmark|or|and) [NC,OR]
+  RewriteCond %{QUERY_STRING} (localhost|loopback|127\.0\.0\.1) [NC,OR]
+  RewriteCond %{QUERY_STRING} \[|\]|\(|\)|{|}:%|<|>|%22|%3c|%3e|%3d [NC,OR]
+  RewriteCond %{QUERY_STRING} (eval\(|javascript:|alert\(|document\.location|document\.cookie) [NC]
+  RewriteRule .* - [F,L]
+</IfModule>

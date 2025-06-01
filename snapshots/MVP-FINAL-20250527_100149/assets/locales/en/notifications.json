@@ -1,0 +1,10 @@
+{
+  "appointment_confirmed_title": "Appointment Confirmed",
+  "appointment_confirmed_body": "Your appointment for {{service}} with {{provider}} on {{date}} at {{time}} is confirmed.",
+  "appointment_cancelled_title": "Appointment Cancelled",
+  "appointment_cancelled_body": "Your appointment for {{service}} with {{provider}} on {{date}} at {{time}} has been cancelled.",
+  "appointment_reminder_title": "Appointment Reminder",
+  "appointment_reminder_body": "This is a reminder for your appointment for {{service}} with {{provider}} on {{date}} at {{time}}.",
+  "error_sending": "Error sending notification.",
+  "success_sent": "Notification sent successfully."
+}

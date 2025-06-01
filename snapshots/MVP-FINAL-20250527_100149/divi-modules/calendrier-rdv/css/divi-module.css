@@ -1,0 +1,337 @@
+/* Styles pour le module Divi Calendrier RDV */
+.calendrier-rdv-divi-module {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+    box-sizing: border-box;
+}
+
+.calendrier-rdv-title {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.calendrier-rdv-description {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.calendrier-rdv-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-top: 20px;
+}
+
+.calendrier-rdv-loading {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+}
+
+.calendrier-rdv-loading .spinner {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: #3498db;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Styles pour le formulaire */
+.calendrier-rdv-form .form-group {
+    margin-bottom: 20px;
+}
+
+.calendrier-rdv-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.calendrier-rdv-form select,
+.calendrier-rdv-form input[type="text"],
+.calendrier-rdv-form input[type="email"],
+.calendrier-rdv-form input[type="tel"],
+.calendrier-rdv-form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.calendrier-rdv-form select:focus,
+.calendrier-rdv-form input:focus,
+.calendrier-rdv-form textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+.calendrier-rdv-form .btn-submit {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.calendrier-rdv-form .btn-submit:hover {
+    background-color: #2980b9;
+}
+
+/* Grille pour les champs côte à côte */
+.calendrier-rdv-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Calendrier */
+.ui-datepicker {
+    background: #fff;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ui-datepicker-header {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px 4px 0 0;
+    padding: 10px 0;
+    margin: -15px -15px 10px -15px;
+}
+
+.ui-datepicker-prev,
+.ui-datepicker-next {
+    color: white;
+    cursor: pointer;
+}
+
+.ui-datepicker-title {
+    color: white;
+    font-weight: 600;
+}
+
+/* Créneaux horaires */
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.time-slot {
+    padding: 10px;
+    text-align: center;
+    background: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.time-slot:hover {
+    background: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.time-slot.selected {
+    background: #3498db;
+    color: white;
+    border-color: #2980b9;
+}
+
+.time-slot.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+/* Messages d'erreur et de succès */
+.calendrier-rdv-message {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.calendrier-rdv-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.calendrier-rdv-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Styles pour l'intégration Google Calendar */
+.calendrier-rdv-google-calendar {
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.calendrier-rdv-google-calendar .et_pb_toggle_title {
+    padding: 15px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.calendrier-rdv-google-calendar .et_pb_toggle_content {
+    padding: 15px;
+    background-color: #fff;
+}
+
+.calendrier-rdv-google-calendar .et_pb_button {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #4285f4 !important;
+    color: white !important;
+    padding: 10px 20px !important;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.calendrier-rdv-google-calendar .et_pb_button:hover {
+    background-color: #3367d6 !important;
+}
+
+/* Styles pour les notifications SMS */
+.calendrier-rdv-sms-notification {
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #e0e0e0;
+}
+
+.calendrier-rdv-sms-notification label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 500;
+    margin: 0;
+}
+
+.calendrier-rdv-sms-notification input[type="checkbox"] {
+    margin-right: 10px;
+    width: auto;
+}
+
+.sms-reminder-time {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.sms-reminder-time label {
+    margin-right: 10px;
+    font-weight: normal;
+}
+
+.sms-reminder-time select {
+    width: auto !important;
+    min-width: 150px;
+}
+
+/* Styles pour les messages d'état */
+.calendrier-rdv-status {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.calendrier-rdv-status.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.calendrier-rdv-status.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Styles pour le bouton de chargement */
+.btn-loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+.btn-loading:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .calendrier-rdv-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .sms-reminder-time {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .sms-reminder-time select {
+        margin-top: 5px;
+        width: 100% !important;
+    }
+}

@@ -1,0 +1,496 @@
+/* ================================
+   Feuille de style administration
+   SAN Digital Solutions
+   ================================ */
+
+/* Variables et couleurs SAN */
+:root {
+  --primary: #272f63;       /* Couleur principale SAN */
+  --secondary: #346fb3;     /* Couleur secondaire */
+  --accent: #8fad0c;        /* Couleur d'accent/boutons */
+  --light: #f8f9fa;
+  --dark: #212529;
+  --gray: #6c757d;
+  --light-gray: #e9ecef;
+  --white: #ffffff;
+  --danger: #cf4444;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+}
+
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+/* Structure de base */
+.admin-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-content {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* En-tête et navigation */
+.admin-header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.logo p {
+  font-size: 0.8rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.admin-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.admin-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  display: block;
+}
+
+.admin-nav a:hover {
+  color: var(--accent);
+}
+
+/* Dropdown menu */
+.nav-dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: var(--white);
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  border-radius: 4px;
+}
+
+.nav-dropdown.active .dropdown-menu,
+.nav-dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 0;
+}
+
+.dropdown-menu a {
+  color: var(--dark);
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-menu a:hover {
+  background-color: var(--light-gray);
+  color: var(--primary);
+}
+
+.caret {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+}
+
+/* Pied de page */
+.admin-footer {
+  background-color: var(--light-gray);
+  border-top: 1px solid #dee2e6;
+  padding: 1rem 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--gray);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Titres */
+h1 {
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: var(--secondary);
+  margin: 1.5rem 0 1rem;
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+/* Boutons */
+.btn {
+  display: inline-block;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: none;
+  font-size: 0.9rem;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1e244f;
+}
+
+.btn-secondary {
+  background-color: var(--gray);
+  color: white;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.btn-success {
+  background-color: var(--accent);
+  color: white;
+}
+
+.btn-success:hover {
+  background-color: #768c0a;
+}
+
+.btn-info {
+  background-color: var(--secondary);
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #2a5c99;
+}
+
+.btn-danger {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: #a83636;
+}
+
+.btn-action {
+  color: var(--secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.btn-action:hover {
+  text-decoration: underline;
+}
+
+/* Formulaires */
+.admin-form {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="time"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--secondary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(52, 111, 179, 0.1);
+}
+
+small {
+  display: block;
+  color: var(--gray);
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+}
+
+.form-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/* Alertes et messages */
+.alert {
+  padding: 1rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0a3622;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+}
+
+/* Page de connexion */
+.login-container {
+  max-width: 450px;
+  margin: 5rem auto;
+  padding: 2rem;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.login-header h2 {
+  font-size: 1.1rem;
+  color: var(--gray);
+  font-weight: normal;
+}
+
+.login-form {
+  margin-bottom: 1.5rem;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--gray);
+  font-size: 0.8rem;
+}
+
+/* Tableau de bord */
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: var(--gray);
+  font-size: 0.9rem;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.dashboard-upcoming {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Tableaux de données */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.data-table th {
+  font-weight: 600;
+  color: var(--primary);
+  background-color: rgba(39, 47, 99, 0.05);
+}
+
+.data-table tr:hover {
+  background-color: rgba(52, 111, 179, 0.05);
+}
+
+.statut-badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.statut-en_attente {
+  background-color: var(--light-gray);
+  color: var(--gray);
+}
+
+.statut-confirmé {
+  background-color: rgba(143, 173, 12, 0.2);
+  color: var(--accent);
+}
+
+.statut-annulé {
+  background-color: rgba(207, 68, 68, 0.2);
+  color: var(--danger);
+}
+
+.no-data {
+  padding: 2rem;
+  text-align: center;
+  color: var(--gray);
+  background-color: var(--light-gray);
+  border-radius: 4px;
+}
+
+.view-all {
+  display: block;
+  text-align: right;
+  margin-top: 1rem;
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-header {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .logo {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .admin-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    display: none;
+  }
+  
+  .nav-dropdown.active .dropdown-menu {
+    display: block;
+  }
+  
+  .admin-content {
+    padding: 1rem;
+  }
+  
+  .stat-card {
+    padding: 1rem;
+  }
+  
+  .data-table {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,67 @@
+# Utiliser une image PHP avec Composer
+FROM composer:2.0 as composer
+
+# Copier les fichiers du projet
+WORKDIR /app
+COPY . .
+
+# Installer les dépendances avec Composer
+RUN composer install --no-dev --optimize-autoloader
+
+# Utiliser une image PHP avec Apache
+FROM php:8.0-apache
+
+# Installer les dépendances système
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
+    git \
+    libicu-dev \
+    && docker-php-ext-install zip pdo_mysql intl
+
+# Activer les modules Apache nécessaires
+RUN a2enmod rewrite
+
+# Configurer le document root
+ENV APACHE_DOCUMENT_ROOT /var/www/html
+WORKDIR /var/www/html
+
+# Copier les fichiers de l'application
+COPY --from=composer /app /var/www/html/wp-content/plugins/calendrier-rdv
+
+# Installer PHPUnit et les dépendances pour les tests
+RUN curl -L https://phar.phpunit.de/phpunit-9.5.10.phar -o /usr/local/bin/phpunit \
+    && chmod +x /usr/local/bin/phpunit
+
+# Installer les dépendances pour les tests fonctionnels
+RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
+    wget \
+    gnupg2 \
+    && wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    && echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable
+
+# Installer ChromeDriver
+RUN CHROME_DRIVER_VERSION=`curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE` \
+    && wget -N https://chromedriver.storage.googleapis.com/$CHROME_DRIVER_VERSION/chromedriver_linux64.zip -P ~/ \
+    && unzip ~/chromedriver_linux64.zip -d ~/ \
+    && rm ~/chromedriver_linux64.zip \
+    && mv -f ~/chromedriver /usr/local/bin/chromedriver \
+    && chown root:root /usr/local/bin/chromedriver \
+    && chmod 0755 /usr/local/bin/chromedriver
+
+# Installer les dépendances PHP nécessaires
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+# Copier la configuration Xdebug
+COPY ./docker/xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
+# Définir les permissions
+RUN chown -R www-data:www-data /var/www/html
+
+# Commande par défaut pour exécuter les tests
+CMD ["phpunit", "--configuration", "/var/www/html/wp-content/plugins/calendrier-rdv/phpunit.xml"]

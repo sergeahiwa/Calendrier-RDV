@@ -1,0 +1,17 @@
+FROM wordpress:latest
+
+# Installer WP-CLI
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x wp-cli.phar \
+    && mv wp-cli.phar /usr/local/bin/wp
+
+# Installer les dépendances nécessaires
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    less \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copier les fichiers du plugin
+COPY . /var/www/html/wp-content/plugins/calendrier-rdv/
+
+# Définir les permissions
+RUN chown -R www-data:www-data /var/www/html/wp-content/plugins/calendrier-rdv

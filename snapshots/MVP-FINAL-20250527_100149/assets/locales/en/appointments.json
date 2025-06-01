@@ -1,0 +1,15 @@
+{
+  "details": "Appointment Details",
+  "customer_name": "Customer Name",
+  "customer_email": "Customer Email",
+  "customer_phone": "Customer Phone",
+  "service": "Service",
+  "provider": "Provider",
+  "date": "Date",
+  "time": "Time",
+  "notes": "Notes",
+  "no_appointments_found": "No appointments found.",
+  "schedule_new": "Schedule New Appointment",
+  "error_scheduling": "Error scheduling appointment.",
+  "success_scheduled": "Appointment scheduled successfully."
+}

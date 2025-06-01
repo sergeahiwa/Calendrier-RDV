@@ -1,0 +1,129 @@
+/* Styles spécifiques pour Divi */
+
+.et-pb-module.et_pb_calendrier_rdv {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+.et-pb-calendrier-rdv-content {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Styles pour le calendrier */
+.et-pb-calendrier-rdv-calendar {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Styles pour les services */
+.et-pb-calendrier-rdv-services {
+    display: grid;
+    grid-template-columns: repeat(var(--service-columns, 3), 1fr);
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.et-pb-calendrier-rdv-service-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease;
+}
+
+.et-pb-calendrier-rdv-service-item:hover {
+    transform: translateY(-2px);
+}
+
+/* Styles pour les prestataires */
+.et-pb-calendrier-rdv-providers {
+    margin-bottom: 20px;
+}
+
+.et-pb-calendrier-rdv-provider-item {
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.et-pb-calendrier-rdv-provider-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Styles pour le formulaire */
+.et-pb-calendrier-rdv-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.et-pb-calendrier-rdv-form-field {
+    margin-bottom: 15px;
+}
+
+.et-pb-calendrier-rdv-form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.et-pb-calendrier-rdv-form-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.et-pb-calendrier-rdv-form-button {
+    background-color: var(--et-global-accent-color, #0c71c3);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.et-pb-calendrier-rdv-form-button:hover {
+    background-color: var(--et-global-accent-color-hover, #0a5f9e);
+}
+
+/* Messages */
+.et-pb-calendrier-rdv-message {
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.et-pb-calendrier-rdv-message-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.et-pb-calendrier-rdv-message-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .et-pb-calendrier-rdv-services {
+        grid-template-columns: 1fr;
+    }
+    
+    .et-pb-calendrier-rdv-calendar {
+        min-height: 300px;
+    }
+}

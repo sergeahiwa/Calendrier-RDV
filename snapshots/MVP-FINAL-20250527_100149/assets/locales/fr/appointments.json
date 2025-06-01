@@ -1,0 +1,15 @@
+{
+  "details": "Détails du rendez-vous",
+  "customer_name": "Nom du client",
+  "customer_email": "Email du client",
+  "customer_phone": "Téléphone du client",
+  "service": "Service",
+  "provider": "Prestataire",
+  "date": "Date",
+  "time": "Heure",
+  "notes": "Notes",
+  "no_appointments_found": "Aucun rendez-vous trouvé.",
+  "schedule_new": "Planifier un nouveau RDV",
+  "error_scheduling": "Erreur lors de la planification du RDV.",
+  "success_scheduled": "Rendez-vous planifié avec succès."
+}

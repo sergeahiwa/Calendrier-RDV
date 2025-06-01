@@ -1,0 +1,77 @@
+# Configuration des fins de ligne
+* text=auto eol=lf
+*.ps1 text eol=crlf
+*.sh text eol=lf
+*.md text eol=lf
+
+# Fichiers binaires
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.exe binary
+*.dll binary
+*.pdb binary
+*.so binary
+*.dylib binary
+*.a binary
+*.lib binary
+*.o binary
+*.obj binary
+*.class binary
+*.jar binary
+*.war binary
+*.ear binary
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+*.rar binary
+*.7z binary
+*.bz2 binary
+*.gz binary
+*.xz binary
+*.z binary
+*.dmg binary
+*.pkg binary
+*.deb binary
+*.rpm binary
+*.msi binary
+*.msm binary
+*.msp binary
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+*.a binary
+*.lib binary
+*.o binary
+*.obj binary
+*.class binary
+*.jar binary
+*.war binary
+*.ear binary
+*.zip binary
+*.tar.gz binary
+*.tgz binary
+*.rar binary
+*.7z binary
+*.bz2 binary
+*.gz binary
+*.xz binary
+*.z binary
+*.dmg binary
+*.pkg binary
+*.deb binary
+*.rpm binary
+*.msi binary
+*.msm binary
+*.msp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.svg binary
+*.otf binary

@@ -1,0 +1,34 @@
+[run]
+source = .
+omit =
+  */node_modules/*
+  */__tests__/*
+  */__mocks__/*
+  *.config.js
+  jest.setup.js
+  src/index.tsx
+  src/serviceWorker.ts
+  src/react-app-env.d.ts
+
+[report]
+exclude_lines =
+  - '/* eslint-disable */'
+  - '/* istanbul ignore next */'
+  - 'export default '
+  - 'export function '
+  - 'export const '
+  - 'export enum '
+  - 'export interface '
+  - 'export type '
+  - 'export namespace '
+  - 'import.*from.*'
+  - '^[\s]*$'  # lignes vides
+  - '^[\s]*//.*$'  # commentaires de ligne
+  - '^[\s]*/\*.*\*/[\s]*$'  # commentaires sur une seule ligne
+  - '^[\s]*/\*\*[\s\S]*?\*/[\s]*$'  # commentaires multi-lignes
+  - '^[\s]*\*.*$'  # lignes de commentaires JSDoc/Multi-lignes
+  - '^[\s]*\*[\s]*$'  # lignes vides dans les commentaires
+  - '^[\s]*\*[\s]*@.*$'  # tags JSDoc
+  - '^[\s]*\*[\s]*@[\s\S]*?$'  # tags JSDoc multi-lignes
+  - '^[\s]*\*[\s]*@[\s\S]*?\*[\s]*/$'  # fin de commentaire JSDoc
+  - '^[\s]*\*[\s]*@[\s\S]*?\*[\s]*$'  # fin de commentaire JSDOC (autre format)

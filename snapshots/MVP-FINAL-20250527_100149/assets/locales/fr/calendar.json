@@ -1,0 +1,10 @@
+{
+  "title": "Calendrier",
+  "month_names": ["Janvier", "Février", "Mars", "Avril", "Mai", "Juin", "Juillet", "Août", "Septembre", "Octobre", "Novembre", "Décembre"],
+  "day_names_short": ["Dim", "Lun", "Mar", "Mer", "Jeu", "Ven", "Sam"],
+  "view_agenda": "Vue Agenda",
+  "view_month": "Vue Mois",
+  "view_week": "Vue Semaine",
+  "view_day": "Vue Jour",
+  "add_event": "Ajouter un événement"
+}

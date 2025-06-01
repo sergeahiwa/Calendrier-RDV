@@ -1,0 +1,10 @@
+{
+  "title": "Calendar",
+  "month_names": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "day_names_short": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "view_agenda": "Agenda View",
+  "view_month": "Month View",
+  "view_week": "Week View",
+  "view_day": "Day View",
+  "add_event": "Add Event"
+}

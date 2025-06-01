@@ -1,0 +1,60 @@
+/* Styles pour le tableau de bord d'administration du Calendrier RDV */
+
+/* Styles pour le conteneur du calendrier */
+#admin-calendar-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Vous pouvez ajouter d'autres styles spécifiques pour le calendrier ici */
+
+.fc .fc-button-primary {
+    background-color: #0073aa; /* Couleur standard des boutons WordPress */
+    border-color: #0073aa;
+}
+
+.fc .fc-button-primary:hover {
+    background-color: #005a87;
+    border-color: #005a87;
+}
+
+/* Styles pour la fenêtre modale des détails de rendez-vous */
+#appointment-details-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+#appointment-details-modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+#appointment-details-modal-content h2 {
+    margin-top: 0;
+}
+
+#appointment-details-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}

@@ -1,0 +1,34 @@
+/* Styles pour les badges de statut */
+.statut-badge {
+    padding: 0.25em 0.6em;
+    font-size: 0.75em;
+    font-weight: 500;
+    border-radius: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.statut-badge.statut-confirmé {
+    background-color: #1cc88a;
+    color: white;
+}
+
+.statut-badge.statut-en_attente {
+    background-color: #f6c23e;
+    color: #212529;
+}
+
+.statut-badge.statut-annulé {
+    background-color: #e74a3b;
+    color: white;
+}
+
+.statut-badge.statut-en_cours {
+    background-color: #4e73df;
+    color: white;
+}
+
+.statut-badge.statut-termine {
+    background-color: #858796;
+    color: white;
+}

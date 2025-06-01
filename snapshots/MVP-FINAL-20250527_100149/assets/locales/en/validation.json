@@ -1,0 +1,8 @@
+{
+  "min_length": "This field must be at least {{count}} characters long.",
+  "max_length": "This field cannot exceed {{count}} characters.",
+  "invalid_format": "Invalid format.",
+  "select_service": "Please select a service.",
+  "select_provider": "Please select a provider.",
+  "select_date_time": "Please select a date and time."
+}

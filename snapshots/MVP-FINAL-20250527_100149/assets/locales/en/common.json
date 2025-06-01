@@ -1,0 +1,42 @@
+{
+  "app": {
+    "name": "Appointment Scheduler",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Operation successful",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back"
+  },
+  "calendar": {
+    "today": "Today",
+    "day": "Day",
+    "week": "Week",
+    "month": "Month",
+    "previous": "Previous",
+    "next": "Next",
+    "no_events": "No events scheduled"
+  },
+  "appointment": {
+    "title": "Appointment",
+    "new": "New Appointment",
+    "edit": "Edit Appointment",
+    "delete": "Delete Appointment",
+    "confirm_delete": "Are you sure you want to delete this appointment?",
+    "status": {
+      "pending": "Pending",
+      "confirmed": "Confirmed",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "email": "Please enter a valid email address",
+    "phone": "Please enter a valid phone number",
+    "date": "Please enter a valid date",
+    "time": "Please enter a valid time"
+  }
+}

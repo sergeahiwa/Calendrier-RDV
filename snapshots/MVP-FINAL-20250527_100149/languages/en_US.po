@@ -1,0 +1,2878 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Calendrier RDV 1.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/calendrier-rdv\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-05-25T23:35:48+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: calendrier-rdv\n"
+
+#. Plugin Name of the plugin
+#: calendrier-rdv.php
+#: admin/class-admin.php:34
+#: admin/class-admin.php:35
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:19
+#: divi-modules/CalendrierRdvModule.php:36
+#: includes/class-admin-menu.php:58
+#: includes/class-admin-menu.php:59
+#: src/Admin/AdminDashboard.php:17
+#: src/Admin/AdminDashboard.php:18
+#: src/Admin/class-admin.php:60
+#: src/Admin/class-admin.php:61
+#: src/Core/Module/CalendrierRdvModule.php:16
+msgid "Calendrier RDV"
+msgstr ""
+
+#. Plugin URI of the plugin
+#. Author URI of the plugin
+#: calendrier-rdv.php
+msgid "https://sansolutions.com/"
+msgstr ""
+
+#. Description of the plugin
+#: calendrier-rdv.php
+msgid "Système de réservation multi-prestataires avec calendrier, notifications, AJAX/REST, gestion des fuseaux horaires et liste d'attente."
+msgstr ""
+
+#. Author of the plugin
+#: calendrier-rdv.php
+msgid "SAN Digital Solutions"
+msgstr ""
+
+#: admin/admin-calendrier.php:4
+msgid "Accès refusé."
+msgstr ""
+
+#: admin/admin-calendrier.php:5
+msgid "Calendrier des rendez-vous"
+msgstr ""
+
+#: admin/class-admin.php:46
+#: admin/class-admin.php:47
+#: src/Core/Module/CalendrierRdvModule.php:33
+#: src/Core/Module/CalendrierRdvModule.php:101
+msgid "Calendrier"
+msgstr ""
+
+#: admin/class-admin.php:55
+#: admin/class-admin.php:56
+msgid "Liste des RDV"
+msgstr ""
+
+#: admin/class-admin.php:64
+#: admin/class-admin.php:65
+#: admin/export-page.php:66
+#: includes/class-admin-menu.php:97
+#: includes/class-admin-menu.php:98
+#: includes/exports/class-export-manager.php:645
+#: src/Admin/Views/dashboard.php:38
+#: src/Admin/Views/dashboard.php:145
+#: src/Core/Module/CalendrierRdvModule.php:25
+msgid "Prestataires"
+msgstr ""
+
+#: admin/class-admin.php:73
+#: admin/class-admin.php:74
+#: admin/class-admin.php:317
+#: admin/logs-manager.php:73
+#: admin/logs-manager.php:322
+#: includes/class-admin-menu.php:144
+#: includes/class-admin-menu.php:145
+#: src/Admin/class-admin.php:72
+#: src/Admin/class-admin.php:73
+#: src/Admin/Views/dashboard.php:149
+msgid "Paramètres"
+msgstr ""
+
+#: admin/class-admin.php:118
+msgid "Êtes-vous sûr de vouloir supprimer ce rendez-vous ?"
+msgstr ""
+
+#: admin/class-admin.php:119
+#: calendrier-rdv.php:112
+#: calendrier-rdv.php:449
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:53
+#: divi-modules/CalendrierRdvModule.php:233
+#: includes/assets_manager.php:67
+#: includes/class-calendrier-rdv.php:290
+#: public/class-public.php:66
+#: src/Common/class-assets-manager.php:73
+#: src/Common/class-assets-manager.php:114
+#: src/Core/Api/AjaxHandlers.php:219
+#: src/Core/Assets/AssetsManager.php:133
+msgid "Une erreur est survenue"
+msgstr ""
+
+#: admin/class-admin.php:120
+#: calendrier-rdv.php:111
+#: calendrier-rdv.php:448
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:52
+#: divi-modules/CalendrierRdvModule.php:232
+#: includes/assets_manager.php:66
+#: includes/class-calendrier-rdv.php:308
+#: includes/class-shortcodes.php:71
+#: public/booking-form.php:114
+#: public/class-calendrier-rdv-public.php:112
+#: public/class-public.php:65
+#: src/Core/Assets/AssetsManager.php:132
+#: assets/js/divi-module.js:81
+msgid "Chargement..."
+msgstr ""
+
+#: admin/class-admin.php:121
+#: includes/class-calendrier-rdv.php:372
+msgid "Enregistrement..."
+msgstr ""
+
+#: admin/class-admin.php:122
+msgid "Modifications enregistrées"
+msgstr ""
+
+#: admin/class-admin.php:134
+#: src/Admin/Views/settings.php:33
+msgid "Paramètres généraux"
+msgstr ""
+
+#: admin/class-admin.php:143
+msgid "Durée par défaut des RDV (minutes)"
+msgstr ""
+
+#: admin/class-admin.php:153
+msgid "Durée par défaut d'un rendez-vous en minutes"
+msgstr ""
+
+#: admin/class-admin.php:161
+msgid "Délai de rappel (heures)"
+msgstr ""
+
+#: admin/class-admin.php:171
+msgid "Délai avant le RDV pour l'envoi du rappel (en heures)"
+msgstr ""
+
+#: admin/class-admin.php:178
+msgid "Paramètres des notifications"
+msgstr ""
+
+#: admin/class-admin.php:187
+msgid "Email de notification"
+msgstr ""
+
+#: admin/class-admin.php:194
+msgid "Email qui recevra les notifications de nouveaux rendez-vous"
+msgstr ""
+
+#: admin/class-admin.php:203
+msgid "Configurez les paramètres généraux du plugin."
+msgstr ""
+
+#: admin/class-admin.php:210
+msgid "Configurez les paramètres des notifications par email."
+msgstr ""
+
+#: admin/class-admin.php:260
+#: admin/class-admin.php:277
+#: admin/class-admin.php:289
+#: admin/class-admin.php:301
+msgid "Vous n'avez pas les droits nécessaires pour accéder à cette page."
+msgstr ""
+
+#: admin/class-admin.php:316
+msgid "Voir les paramètres"
+msgstr ""
+
+#: admin/class-admin.php:322
+msgid "Voir la documentation"
+msgstr ""
+
+#: admin/class-admin.php:323
+msgid "Documentation"
+msgstr ""
+
+#: admin/export-page.php:20
+#: admin/logs-manager.php:20
+#: admin/provider-dashboard.php:20
+msgid "Vous n'avez pas les permissions suffisantes pour accéder à cette page."
+msgstr ""
+
+#: admin/export-page.php:54
+#: admin/export-page.php:198
+#: admin/export-page.php:215
+#: admin/provider-dashboard.php:119
+msgid "Tous"
+msgstr ""
+
+#: admin/export-page.php:55
+#: admin/provider-dashboard.php:193
+#: includes/exports/class-export-manager.php:660
+#: public/partials/waitlist-status.php:44
+#: src/Admin/Views/dashboard.php:30
+msgid "En attente"
+msgstr ""
+
+#: admin/export-page.php:56
+#: src/Admin/Views/dashboard.php:34
+msgid "Confirmés"
+msgstr ""
+
+#: admin/export-page.php:57
+msgid "Terminés"
+msgstr ""
+
+#: admin/export-page.php:58
+msgid "Annulés"
+msgstr ""
+
+#: admin/export-page.php:59
+msgid "Absents"
+msgstr ""
+
+#: admin/export-page.php:64
+#: admin/logs-manager.php:79
+#: admin/logs-manager.php:338
+#: includes/class-admin-menu.php:79
+#: includes/class-admin-menu.php:80
+#: includes/exports/class-export-manager.php:643
+#: src/Admin/Views/dashboard.php:26
+msgid "Rendez-vous"
+msgstr ""
+
+#: admin/export-page.php:65
+#: includes/class-admin-menu.php:88
+#: includes/class-admin-menu.php:89
+#: includes/exports/class-export-manager.php:644
+#: src/Admin/Views/dashboard.php:42
+#: src/Core/Module/CalendrierRdvModule.php:24
+msgid "Services"
+msgstr ""
+
+#: admin/export-page.php:67
+#: includes/class-admin-menu.php:106
+#: includes/class-admin-menu.php:107
+#: includes/exports/class-export-manager.php:646
+msgid "Clients"
+msgstr ""
+
+#: admin/export-page.php:79
+msgid "Exportation des données"
+msgstr ""
+
+#: admin/export-page.php:82
+msgid "Utilisez ce formulaire pour exporter vos données dans différents formats. Vous pouvez filtrer les données à exporter selon vos besoins."
+msgstr ""
+
+#: admin/export-page.php:90
+msgid "Type de données à exporter"
+msgstr ""
+
+#: admin/export-page.php:94
+msgid "Type de données"
+msgstr ""
+
+#: admin/export-page.php:105
+msgid "Format d'exportation"
+msgstr ""
+
+#: admin/export-page.php:118
+msgid "Filtres pour les rendez-vous"
+msgstr ""
+
+#: admin/export-page.php:122
+msgid "Date de début"
+msgstr ""
+
+#: admin/export-page.php:129
+msgid "Date de fin"
+msgstr ""
+
+#: admin/export-page.php:136
+#: admin/export-page.php:177
+#: admin/export-page.php:195
+#: admin/provider-dashboard.php:152
+#: includes/exports/class-export-manager.php:313
+#: includes/exports/class-export-manager.php:387
+#: public/partials/waitlist-status.php:29
+#: src/Admin/Views/dashboard.php:69
+msgid "Statut"
+msgstr ""
+
+#: admin/export-page.php:147
+#: admin/logs-manager.php:81
+#: admin/logs-manager.php:344
+#: config/roles.php:32
+#: includes/exports/class-export-manager.php:311
+#: public/partials/waitlist-status.php:25
+#: src/Admin/Views/dashboard.php:68
+#: assets/js/divi-module.js:117
+msgid "Prestataire"
+msgstr ""
+
+#: admin/export-page.php:150
+msgid "Tous les prestataires"
+msgstr ""
+
+#: admin/export-page.php:159
+#: admin/logs-manager.php:80
+#: admin/logs-manager.php:341
+#: admin/provider-dashboard.php:151
+#: includes/exports/class-export-manager.php:310
+#: public/partials/booking-form.php:51
+#: public/partials/waitlist-status.php:24
+#: src/Admin/Views/dashboard.php:67
+#: assets/js/divi-module.js:98
+msgid "Service"
+msgstr ""
+
+#: admin/export-page.php:162
+msgid "Tous les services"
+msgstr ""
+
+#: admin/export-page.php:173
+msgid "Filtres pour les services"
+msgstr ""
+
+#: admin/export-page.php:180
+msgid "Tous les statuts"
+msgstr ""
+
+#: admin/export-page.php:181
+msgid "Publié"
+msgstr ""
+
+#: admin/export-page.php:182
+msgid "Brouillon"
+msgstr ""
+
+#: admin/export-page.php:183
+msgid "Corbeille"
+msgstr ""
+
+#: admin/export-page.php:191
+msgid "Filtres pour les prestataires"
+msgstr ""
+
+#: admin/export-page.php:199
+msgid "Actifs uniquement"
+msgstr ""
+
+#: admin/export-page.php:200
+msgid "Inactifs uniquement"
+msgstr ""
+
+#: admin/export-page.php:208
+msgid "Filtres pour les clients"
+msgstr ""
+
+#: admin/export-page.php:212
+msgid "Avec rendez-vous"
+msgstr ""
+
+#: admin/export-page.php:216
+msgid "Avec rendez-vous uniquement"
+msgstr ""
+
+#: admin/export-page.php:217
+msgid "Sans rendez-vous uniquement"
+msgstr ""
+
+#: admin/export-page.php:226
+#: includes/class-admin-menu.php:135
+msgid "Exporter les données"
+msgstr ""
+
+#: admin/export-page.php:254
+#: includes/exports/class-export-manager.php:60
+msgid "Format CSV (valeurs séparées par des virgules)"
+msgstr ""
+
+#: admin/export-page.php:255
+msgid "Format Excel (XLSX) avec mise en forme"
+msgstr ""
+
+#: admin/export-page.php:282
+msgid "Une erreur est survenue lors de l'exportation."
+msgstr ""
+
+#: admin/export-page.php:286
+msgid "Une erreur est survenue lors de la communication avec le serveur."
+msgstr ""
+
+#: admin/logs-manager.php:42
+#, php-format
+msgid "%d logs plus anciens que %d jours ont été supprimés."
+msgstr ""
+
+#: admin/logs-manager.php:67
+msgid "Toutes les actions"
+msgstr ""
+
+#: admin/logs-manager.php:68
+#: admin/logs-manager.php:307
+msgid "Création"
+msgstr ""
+
+#: admin/logs-manager.php:69
+#: admin/logs-manager.php:310
+msgid "Modification"
+msgstr ""
+
+#: admin/logs-manager.php:70
+#: admin/logs-manager.php:313
+msgid "Suppression"
+msgstr ""
+
+#: admin/logs-manager.php:71
+#: admin/logs-manager.php:316
+msgid "Annulation"
+msgstr ""
+
+#: admin/logs-manager.php:72
+#: admin/logs-manager.php:319
+msgid "Paiement"
+msgstr ""
+
+#: admin/logs-manager.php:74
+#: admin/logs-manager.php:325
+msgid "Connexion"
+msgstr ""
+
+#: admin/logs-manager.php:78
+msgid "Tous les objets"
+msgstr ""
+
+#: admin/logs-manager.php:82
+#: admin/logs-manager.php:347
+#: src/Core/Module/CalendrierRdvModule.php:26
+msgid "Réservation"
+msgstr ""
+
+#: admin/logs-manager.php:83
+#: admin/logs-manager.php:350
+msgid "Plugin"
+msgstr ""
+
+#: admin/logs-manager.php:94
+msgid "Tous les utilisateurs"
+msgstr ""
+
+#: admin/logs-manager.php:103
+#: includes/class-admin-menu.php:125
+#: includes/class-admin-menu.php:126
+msgid "Journal d'activité"
+msgstr ""
+
+#: admin/logs-manager.php:108
+msgid "Filtres"
+msgstr ""
+
+#: admin/logs-manager.php:114
+msgid "Action :"
+msgstr ""
+
+#: admin/logs-manager.php:125
+msgid "Type d'objet :"
+msgstr ""
+
+#: admin/logs-manager.php:136
+msgid "Utilisateur :"
+msgstr ""
+
+#: admin/logs-manager.php:147
+#: admin/provider-dashboard.php:124
+msgid "Du :"
+msgstr ""
+
+#: admin/logs-manager.php:152
+#: admin/provider-dashboard.php:129
+msgid "Au :"
+msgstr ""
+
+#: admin/logs-manager.php:157
+#: admin/provider-dashboard.php:134
+msgid "Filtrer"
+msgstr ""
+
+#: admin/logs-manager.php:159
+msgid "Réinitialiser"
+msgstr ""
+
+#: admin/logs-manager.php:171
+msgid "Supprimer les logs plus anciens que"
+msgstr ""
+
+#: admin/logs-manager.php:174
+msgid "jours"
+msgstr ""
+
+#: admin/logs-manager.php:175
+msgid "Êtes-vous sûr de vouloir supprimer les anciens logs ? Cette action est irréversible."
+msgstr ""
+
+#: admin/logs-manager.php:176
+msgid "Purger"
+msgstr ""
+
+#: admin/logs-manager.php:184
+#, php-format
+msgid "%s élément"
+msgid_plural "%s éléments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/logs-manager.php:270
+#: admin/logs-manager.php:390
+#: admin/provider-dashboard.php:148
+#: includes/exports/class-export-manager.php:305
+#: public/partials/booking-form.php:146
+#: public/partials/waitlist-status.php:26
+#: src/Admin/Views/dashboard.php:65
+#: assets/js/divi-module.js:136
+msgid "Date"
+msgstr ""
+
+#: admin/logs-manager.php:271
+#: admin/logs-manager.php:391
+msgid "Utilisateur"
+msgstr ""
+
+#: admin/logs-manager.php:272
+#: admin/logs-manager.php:392
+msgid "Action"
+msgstr ""
+
+#: admin/logs-manager.php:273
+#: admin/logs-manager.php:393
+msgid "Type"
+msgstr ""
+
+#: admin/logs-manager.php:274
+#: admin/logs-manager.php:394
+#: includes/exports/class-export-manager.php:304
+#: includes/exports/class-export-manager.php:381
+#: includes/exports/class-export-manager.php:427
+#: includes/exports/class-export-manager.php:491
+msgid "ID"
+msgstr ""
+
+#: admin/logs-manager.php:275
+#: admin/logs-manager.php:395
+msgid "Message"
+msgstr ""
+
+#: admin/logs-manager.php:276
+#: admin/logs-manager.php:396
+msgid "Détails"
+msgstr ""
+
+#: admin/logs-manager.php:282
+msgid "Aucun log trouvé."
+msgstr ""
+
+#: admin/logs-manager.php:369
+#: admin/logs-manager.php:409
+#: admin/logs-manager.php:412
+#: admin/provider-dashboard.php:218
+msgid "Voir"
+msgstr ""
+
+#: admin/logs-manager.php:410
+msgid "Masquer"
+msgstr ""
+
+#: admin/provider-dashboard.php:28
+msgid "Vous n'êtes pas enregistré comme prestataire."
+msgstr ""
+
+#: admin/provider-dashboard.php:36
+#: config/display.php:182
+#: config/ui.php:76
+msgid "Mes rendez-vous"
+msgstr ""
+
+#: admin/provider-dashboard.php:37
+msgid "Mon planning"
+msgstr ""
+
+#: admin/provider-dashboard.php:38
+#: admin/provider-dashboard.php:417
+msgid "Mes services"
+msgstr ""
+
+#: admin/provider-dashboard.php:39
+#: config/display.php:200
+#: config/ui.php:94
+msgid "Mon profil"
+msgstr ""
+
+#: admin/provider-dashboard.php:51
+msgid "Tableau de bord prestataire"
+msgstr ""
+
+#: admin/provider-dashboard.php:115
+msgid "Statut :"
+msgstr ""
+
+#: admin/provider-dashboard.php:117
+msgid "À venir"
+msgstr ""
+
+#: admin/provider-dashboard.php:118
+msgid "Passés"
+msgstr ""
+
+#: admin/provider-dashboard.php:142
+msgid "Aucun rendez-vous trouvé pour cette période."
+msgstr ""
+
+#: admin/provider-dashboard.php:149
+#: includes/exports/class-export-manager.php:306
+#: assets/js/divi-module.js:149
+msgid "Heure"
+msgstr ""
+
+#: admin/provider-dashboard.php:150
+#: includes/exports/class-export-manager.php:307
+#: src/Admin/Views/dashboard.php:66
+msgid "Client"
+msgstr ""
+
+#: admin/provider-dashboard.php:153
+#: public/partials/waitlist-status.php:30
+#: src/Admin/Views/dashboard.php:70
+msgid "Actions"
+msgstr ""
+
+#: admin/provider-dashboard.php:177
+msgid "Client inconnu"
+msgstr ""
+
+#: admin/provider-dashboard.php:180
+msgid "Aucun client"
+msgstr ""
+
+#: admin/provider-dashboard.php:187
+msgid "Service inconnu"
+msgstr ""
+
+#: admin/provider-dashboard.php:194
+#: includes/exports/class-export-manager.php:661
+msgid "Confirmé"
+msgstr ""
+
+#: admin/provider-dashboard.php:195
+#: includes/exports/class-export-manager.php:662
+msgid "Annulé"
+msgstr ""
+
+#: admin/provider-dashboard.php:196
+#: includes/exports/class-export-manager.php:663
+msgid "Terminé"
+msgstr ""
+
+#: admin/provider-dashboard.php:197
+#: includes/exports/class-export-manager.php:664
+msgid "Absent"
+msgstr ""
+
+#: admin/provider-dashboard.php:225
+#: public/partials/waitlist-button.php:105
+#: src/Public/Views/calendar.php:39
+msgid "Confirmer"
+msgstr ""
+
+#: admin/provider-dashboard.php:233
+#: public/class-calendrier-rdv-public.php:117
+msgid "Êtes-vous sûr de vouloir annuler ce rendez-vous ?"
+msgstr ""
+
+#: admin/provider-dashboard.php:234
+#: public/partials/waitlist-button.php:100
+msgid "Annuler"
+msgstr ""
+
+#: admin/provider-dashboard.php:258
+msgid "Utilisez le calendrier ci-dessous pour gérer vos disponibilités."
+msgstr ""
+
+#: admin/provider-dashboard.php:300
+msgid "Ajouter une disponibilité du "
+msgstr ""
+
+#: admin/provider-dashboard.php:300
+msgid "au"
+msgstr ""
+
+#: admin/provider-dashboard.php:316
+msgid "Disponible"
+msgstr ""
+
+#: admin/provider-dashboard.php:332
+msgid "Supprimer cette disponibilité ?"
+msgstr ""
+
+#: admin/provider-dashboard.php:378
+msgid "Services mis à jour avec succès."
+msgstr ""
+
+#: admin/provider-dashboard.php:392
+msgid "Assigner des services au prestataire"
+msgstr ""
+
+#: admin/provider-dashboard.php:409
+msgid "Enregistrer les services"
+msgstr ""
+
+#: admin/provider-dashboard.php:421
+msgid "Aucun service n'est actuellement assigné à ce prestataire."
+msgstr ""
+
+#: admin/provider-dashboard.php:432
+msgid "Durée:"
+msgstr ""
+
+#: admin/provider-dashboard.php:433
+msgid "Prix:"
+msgstr ""
+
+#: admin/provider-dashboard.php:434
+msgid "Capacité:"
+msgstr ""
+
+#: admin/provider-dashboard.php:472
+msgid "Profil mis à jour avec succès."
+msgstr ""
+
+#: admin/provider-dashboard.php:477
+msgid "Erreur lors de la mise à jour du profil."
+msgstr ""
+
+#: admin/provider-dashboard.php:488
+#: public/partials/booking-form.php:205
+#: src/Public/Views/calendar.php:110
+msgid "Nom complet"
+msgstr ""
+
+#: admin/provider-dashboard.php:495
+#: includes/exports/class-export-manager.php:308
+#: includes/exports/class-export-manager.php:429
+#: includes/exports/class-export-manager.php:493
+msgid "Email"
+msgstr ""
+
+#: admin/provider-dashboard.php:502
+#: includes/exports/class-export-manager.php:309
+#: includes/exports/class-export-manager.php:430
+#: includes/exports/class-export-manager.php:494
+#: public/partials/booking-form.php:223
+#: src/Public/Views/calendar.php:132
+msgid "Téléphone"
+msgstr ""
+
+#: admin/provider-dashboard.php:509
+msgid "Biographie"
+msgstr ""
+
+#: admin/provider-dashboard.php:522
+msgid "Couleur"
+msgstr ""
+
+#: admin/provider-dashboard.php:525
+msgid "Cette couleur sera utilisée pour identifier vos rendez-vous dans le calendrier."
+msgstr ""
+
+#: admin/provider-dashboard.php:532
+msgid "Mettre à jour le profil"
+msgstr ""
+
+#: calendrier-rdv.php:37
+#, php-format
+msgid "Calendrier RDV nécessite PHP 7.4 ou supérieur. Vous utilisez actuellement PHP %s. Veuillez mettre à jour votre version de PHP."
+msgstr ""
+
+#: calendrier-rdv.php:51
+msgid "Les dépendances de Calendrier RDV ne sont pas installées. Veuillez exécuter \"composer install\"."
+msgstr ""
+
+#: calendrier-rdv.php:113
+#: includes/class-calendrier-rdv.php:291
+#: src/Core/Api/AjaxHandlers.php:220
+msgid "Opération réussie"
+msgstr ""
+
+#: calendrier-rdv.php:326
+#: includes/class-installer.php:231
+msgid "Prendre un rendez-vous"
+msgstr ""
+
+#: calendrier-rdv.php:363
+msgid "Calendrier des Rendez-vous"
+msgstr ""
+
+#: calendrier-rdv.php:388
+msgid "Vous n'avez pas les droits suffisants pour accéder à cette page."
+msgstr ""
+
+#: calendrier-rdv.php:414
+#: calendrier-rdv.php:415
+msgid "Vue calendrier"
+msgstr ""
+
+#: calendrier-rdv.php:450
+#: includes/assets_manager.php:71
+#: src/Core/Assets/AssetsManager.php:137
+msgid "Date invalide"
+msgstr ""
+
+#: calendrier-rdv.php:451
+msgid "Heure invalide"
+msgstr ""
+
+#: calendrier-rdv.php:452
+#: public/class-public.php:70
+msgid "Ce champ est obligatoire"
+msgstr ""
+
+#: calendrier-rdv.php:453
+#: public/class-public.php:71
+#: public/class-public.php:224
+#: src/Core/Api/AjaxHandlers.php:123
+msgid "Adresse email invalide"
+msgstr ""
+
+#: config/api.php:327
+msgid "En-tête d'autorisation manquant"
+msgstr ""
+
+#: config/api.php:335
+msgid "Format de jeton d'autorisation invalide"
+msgstr ""
+
+#: config/display.php:64
+#: config/ui.php:137
+msgid "Jour"
+msgstr ""
+
+#: config/display.php:70
+#: config/ui.php:132
+msgid "Semaine"
+msgstr ""
+
+#: config/display.php:76
+#: config/ui.php:127
+msgid "Mois"
+msgstr ""
+
+#: config/display.php:82
+#: src/Core/Module/CalendrierRdvModule.php:66
+#: src/Core/Module/CalendrierRdvModule.php:88
+#: src/Core/Module/CalendrierRdvModule.php:102
+msgid "Liste"
+msgstr ""
+
+#: config/display.php:113
+#: config/ui.php:108
+#: public/class-calendrier-rdv-public.php:115
+#: public/class-calendrier-rdv-public.php:268
+#: src/Api/class-rest-controller.php:280
+#: src/Public/class-public-handler.php:127
+msgid "Votre rendez-vous a été enregistré avec succès !"
+msgstr ""
+
+#: config/display.php:114
+msgid "Une erreur est survenue lors de la réservation. Veuillez réessayer."
+msgstr ""
+
+#: config/display.php:195
+#: config/ui.php:89
+msgid "Vous n'avez aucun rendez-vous à venir."
+msgstr ""
+
+#: config/emails.php:28
+#, php-format
+msgid "&copy; %s %s. Tous droits réservés."
+msgstr ""
+
+#: config/emails.php:35
+msgid "Mentions légales"
+msgstr ""
+
+#: config/emails.php:39
+msgid "Confidentialité"
+msgstr ""
+
+#: config/emails.php:43
+msgid "Contact"
+msgstr ""
+
+#: config/emails.php:54
+#: config/notifications.php:128
+msgid "Confirmation de votre rendez-vous du {appointment_date}"
+msgstr ""
+
+#: config/emails.php:55
+#: includes/class-installer.php:243
+msgid "Confirmation de rendez-vous"
+msgstr ""
+
+#: config/emails.php:78
+#: config/emails.php:224
+msgid "Rappel : Votre rendez-vous du {appointment_date}"
+msgstr ""
+
+#: config/emails.php:79
+#: config/emails.php:188
+msgid "Rappel de rendez-vous"
+msgstr ""
+
+#: config/emails.php:100
+#: config/notifications.php:280
+msgid "Annulation de votre rendez-vous du {appointment_date}"
+msgstr ""
+
+#: config/emails.php:101
+#: config/emails.php:144
+msgid "Rendez-vous annulé"
+msgstr ""
+
+#: config/emails.php:120
+#: config/emails.php:163
+msgid "[{site_name}] Nouveau rendez-vous : {service_name}"
+msgstr ""
+
+#: config/emails.php:121
+#: config/emails.php:164
+msgid "Nouveau rendez-vous"
+msgstr ""
+
+#: config/emails.php:143
+msgid "[{site_name}] Rendez-vous annulé : {service_name}"
+msgstr ""
+
+#: config/emails.php:187
+msgid "[Rappel] Rendez-vous demain : {service_name}"
+msgstr ""
+
+#: config/notifications.php:154
+#, php-format
+msgid "[%s] Nouveau rendez-vous: %s"
+msgstr ""
+
+#: config/notifications.php:218
+msgid "Rappel: Votre rendez-vous du {appointment_date}"
+msgstr ""
+
+#: config/notifications.php:307
+#, php-format
+msgid "[%s] Rendez-vous annulé: %s"
+msgstr ""
+
+#: config/payments.php:26
+msgid "Mode test activé. Les paiements ne seront pas réellement traités."
+msgstr ""
+
+#: config/payments.php:44
+msgid "Carte de crédit (Stripe)"
+msgstr ""
+
+#: config/payments.php:45
+msgid "Paiement sécurisé par carte bancaire"
+msgstr ""
+
+#: config/payments.php:63
+msgid "PayPal"
+msgstr ""
+
+#: config/payments.php:64
+msgid "Paiement sécurisé via PayPal"
+msgstr ""
+
+#: config/payments.php:92
+msgid "Virement bancaire"
+msgstr ""
+
+#: config/payments.php:93
+msgid "Effectuez un virement bancaire directement sur notre compte. Les détails du compte vous seront fournis après la commande."
+msgstr ""
+
+#: config/payments.php:94
+msgid "Veuillez effectuer le virement sur le compte bancaire indiqué ci-dessous. Utilisez le numéro de commande comme référence de paiement. Votre commande sera traitée dès réception du paiement."
+msgstr ""
+
+#: config/payments.php:108
+msgid "Chèque"
+msgstr ""
+
+#: config/payments.php:109
+msgid "Envoyez un chèque à l'adresse suivante :"
+msgstr ""
+
+#: config/payments.php:110
+msgid "Veuillez libeller votre chèque à l'ordre de [nom du bénéficiaire]. Envoyez votre chèque à l'adresse ci-dessous. Votre commande sera traitée dès réception du paiement."
+msgstr ""
+
+#: config/payments.php:126
+msgid "Paiement sur place"
+msgstr ""
+
+#: config/payments.php:127
+msgid "Paiement en espèces ou carte bancaire directement sur place"
+msgstr ""
+
+#: config/payments.php:128
+msgid "Aucun paiement n'est requis pour le moment. Vous réglerez directement sur place."
+msgstr ""
+
+#: config/payments.php:156
+msgid "Changement d'avis"
+msgstr ""
+
+#: config/payments.php:157
+msgid "J'ai trouvé moins cher ailleurs"
+msgstr ""
+
+#: config/payments.php:158
+msgid "Le service ne correspond pas à la description"
+msgstr ""
+
+#: config/payments.php:159
+msgid "Autre raison"
+msgstr ""
+
+#: config/payments.php:180
+#, php-format
+msgid "Merci pour votre confiance. Pour tout renseignement, veuillez contacter %s."
+msgstr ""
+
+#: config/payments.php:193
+msgid "Votre reçu pour la réservation #{booking_id}"
+msgstr ""
+
+#: config/payments.php:194
+msgid "Voici votre reçu"
+msgstr ""
+
+#: config/payments.php:204
+#, php-format
+msgid "Merci pour votre confiance. Pour toute question, contactez-nous à %s."
+msgstr ""
+
+#: config/roles.php:22
+msgid "Gestionnaire de calendrier"
+msgstr ""
+
+#: config/security.php:159
+#: includes/class-calendrier-rdv.php:311
+#: includes/class-shortcodes.php:74
+msgid "Ce champ est obligatoire."
+msgstr ""
+
+#: config/security.php:165
+#: includes/class-calendrier-rdv.php:310
+#: includes/class-shortcodes.php:73
+msgid "Veuillez entrer une adresse email valide."
+msgstr ""
+
+#: config/security.php:171
+msgid "Veuillez entrer une URL valide."
+msgstr ""
+
+#: config/security.php:177
+msgid "Ce champ doit être un nombre."
+msgstr ""
+
+#: config/security.php:183
+msgid "Ce champ doit être un nombre entier."
+msgstr ""
+
+#: config/security.php:189
+#, php-format
+msgid "La valeur doit être supérieure ou égale à %s."
+msgstr ""
+
+#: config/security.php:195
+#, php-format
+msgid "La valeur doit être inférieure ou égale à %s."
+msgstr ""
+
+#: config/security.php:201
+#, php-format
+msgid "Ce champ doit contenir au moins %s caractères."
+msgstr ""
+
+#: config/security.php:207
+#, php-format
+msgid "Ce champ ne doit pas dépasser %s caractères."
+msgstr ""
+
+#: config/security.php:214
+msgid "Les champs ne correspondent pas."
+msgstr ""
+
+#: config/security.php:220
+#, php-format
+msgid "La valeur doit être parmi : %s"
+msgstr ""
+
+#: config/security.php:226
+msgid "Veuillez entrer une date valide."
+msgstr ""
+
+#: config/security.php:232
+msgid "Veuillez entrer une heure valide (HH:MM)."
+msgstr ""
+
+#: config/services.php:33
+msgid "Avez-vous des informations supplémentaires à nous communiquer ?"
+msgstr ""
+
+#: config/ui.php:109
+msgid "Votre rendez-vous a été mis à jour avec succès."
+msgstr ""
+
+#: config/ui.php:110
+#: includes/class-cancellation-handler.php:140
+#: public/class-calendrier-rdv-public.php:311
+msgid "Votre rendez-vous a été annulé avec succès."
+msgstr ""
+
+#: config/ui.php:111
+msgid "Votre profil a été mis à jour avec succès."
+msgstr ""
+
+#: config/ui.php:114
+#: includes/class-calendrier-rdv.php:309
+#: includes/class-shortcodes.php:72
+#: includes/class-waitlist-handler.php:74
+#: public/class-calendrier-rdv-public.php:116
+msgid "Une erreur est survenue. Veuillez réessayer."
+msgstr ""
+
+#: config/ui.php:115
+msgid "Veuillez remplir correctement tous les champs requis."
+msgstr ""
+
+#: config/ui.php:116
+msgid "La date sélectionnée est invalide."
+msgstr ""
+
+#: config/ui.php:117
+msgid "L'horaire sélectionné est invalide."
+msgstr ""
+
+#: config/ui.php:118
+msgid "Ce créneau n'est plus disponible. Veuillez en choisir un autre."
+msgstr ""
+
+#: config/ui.php:119
+#: includes/class-cancellation-handler.php:106
+msgid "L'annulation n'est plus possible pour ce rendez-vous."
+msgstr ""
+
+#: config/ui.php:120
+msgid "Le report n'est plus possible pour ce rendez-vous."
+msgstr ""
+
+#: config/ui.php:141
+msgid "Agenda"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:62
+#: includes/class-appointment-manager.php:168
+msgid "ID du prestataire"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:65
+msgid "Laissez vide pour permettre le choix du prestataire"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:69
+#: includes/class-appointment-manager.php:169
+msgid "ID du service"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:72
+msgid "Laissez vide pour permettre le choix du service"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:76
+#: divi-modules/CalendrierRdvModule.php:115
+msgid "Afficher le titre"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:79
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:89
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:140
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:151
+#: divi-modules/CalendrierRdvModule.php:118
+#: includes/exports/class-export-manager.php:451
+msgid "Oui"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:80
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:90
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:141
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:152
+#: divi-modules/CalendrierRdvModule.php:119
+#: includes/exports/class-export-manager.php:451
+msgid "Non"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:86
+msgid "Afficher la description"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:97
+#: divi-modules/CalendrierRdvModule.php:136
+msgid "Couleur principale"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:103
+msgid "Couleur des boutons et éléments principaux"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:106
+msgid "Couleur secondaire"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:112
+msgid "Couleur des éléments au survol"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:115
+msgid "Couleur du texte"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:123
+msgid "Rayon des coins"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:137
+msgid "Afficher l'option Google Calendar"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:148
+msgid "Activer les notifications SMS"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:159
+msgid "CSS personnalisé"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:251
+#: divi-modules/CalendrierRdvModule.php:193
+#: public/partials/booking-form.php:32
+#: src/Public/Views/calendar.php:27
+msgid "Prendre rendez-vous"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:256
+msgid "Remplissez le formulaire ci-dessous pour réserver votre créneau."
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:264
+#: divi-modules/CalendrierRdvModule.php:201
+#: src/Public/Views/calendar.php:21
+msgid "Chargement du calendrier..."
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:272
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:277
+#: public/partials/booking-form.php:343
+msgid "Ajouter à Google Calendar"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:275
+msgid "Souhaitez-vous ajouter ce rendez-vous à votre calendrier Google ?"
+msgstr ""
+
+#: divi-modules/calendrier-rdv/CalendrierRdvModule.php:288
+msgid "Recevoir un rappel par SMS avant le rendez-vous"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:97
+#: divi-modules/CalendrierRdvModule.php:101
+msgid "Contenu"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:104
+msgid "Style"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:107
+msgid "Défaut"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:108
+msgid "Moderne"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:109
+msgid "Minimal"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:112
+msgid "Choisissez le style d'affichage du calendrier."
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:122
+msgid "Afficher le titre du calendrier."
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:129
+msgid "Design"
+msgstr ""
+
+#: divi-modules/CalendrierRdvModule.php:133
+msgid "Couleurs"
+msgstr ""
+
+#: includes/assets_manager.php:68
+#: src/Core/Assets/AssetsManager.php:134
+msgid "Réservation réussie"
+msgstr ""
+
+#: includes/assets_manager.php:69
+#: src/Core/Assets/AssetsManager.php:135
+msgid "Aucun service disponible"
+msgstr ""
+
+#: includes/assets_manager.php:70
+#: src/Core/Assets/AssetsManager.php:136
+msgid "Aucun prestataire disponible"
+msgstr ""
+
+#: includes/assets_manager.php:72
+#: src/Core/Assets/AssetsManager.php:138
+msgid "Horaire invalide"
+msgstr ""
+
+#: includes/assets_manager.php:73
+#: src/Core/Assets/AssetsManager.php:139
+msgid "Veuillez remplir tous les champs requis"
+msgstr ""
+
+#: includes/class-admin-menu.php:70
+#: includes/class-admin-menu.php:71
+#: src/Admin/AdminDashboard.php:29
+#: src/Admin/AdminDashboard.php:30
+msgid "Tableau de bord"
+msgstr ""
+
+#: includes/class-admin-menu.php:115
+#: includes/class-admin-menu.php:116
+msgid "Paiements"
+msgstr ""
+
+#: includes/class-admin-menu.php:136
+msgid "Exporter"
+msgstr ""
+
+#: includes/class-admin-menu.php:153
+#: includes/class-admin-menu.php:154
+msgid "Outils"
+msgstr ""
+
+#: includes/class-appointment-conflict-detector.php:114
+#: src/Core/Api/AjaxHandlers.php:185
+msgid "Créneau disponible"
+msgstr ""
+
+#: includes/class-appointment-conflict-detector.php:165
+msgid "Conflit de rendez-vous détecté :"
+msgstr ""
+
+#: includes/class-appointment-conflict-detector.php:172
+#, php-format
+msgid "• %1$s de %2$s à %3$s\\n"
+msgstr ""
+
+#: includes/class-appointment-conflict-detector.php:179
+msgid "Veuillez choisir un autre créneau."
+msgstr ""
+
+#: includes/class-appointment-manager.php:76
+msgid "Erreur lors de l'enregistrement du rendez-vous"
+msgstr ""
+
+#: includes/class-appointment-manager.php:97
+#: includes/class-appointment-manager.php:136
+#: src/Core/Database/Appointments.php:258
+#: src/Core/Database/Appointments.php:414
+msgid "Rendez-vous introuvable"
+msgstr ""
+
+#: includes/class-appointment-manager.php:112
+#: src/Core/Database/Appointments.php:495
+msgid "Erreur lors de la mise à jour du rendez-vous"
+msgstr ""
+
+#: includes/class-appointment-manager.php:146
+msgid "Erreur lors de la suppression du rendez-vous"
+msgstr ""
+
+#: includes/class-appointment-manager.php:167
+msgid "ID du client"
+msgstr ""
+
+#: includes/class-appointment-manager.php:170
+msgid "Date et heure de début"
+msgstr ""
+
+#: includes/class-appointment-manager.php:171
+msgid "Date et heure de fin"
+msgstr ""
+
+#: includes/class-appointment-manager.php:176
+#: src/Core/Database/Appointments.php:32
+#: src/Core/Database/Providers.php:80
+#: src/Core/Database/Providers.php:148
+#: src/Core/Database/Services.php:74
+#: src/Core/Database/Services.php:140
+#, php-format
+msgid "Le champ %s est requis"
+msgstr ""
+
+#: includes/class-appointment-manager.php:187
+msgid "La date de fin doit être postérieure à la date de début"
+msgstr ""
+
+#: includes/class-appointment-manager.php:197
+msgid "Ce créneau horaire n'est plus disponible"
+msgstr ""
+
+#: includes/class-appointment-manager.php:201
+#: public/class-public.php:238
+msgid "Format de date ou d'heure invalide"
+msgstr ""
+
+#: includes/class-appointment-manager.php:206
+msgid "Client invalide"
+msgstr ""
+
+#: includes/class-appointment-manager.php:211
+msgid "Prestataire invalide"
+msgstr ""
+
+#: includes/class-appointment-manager.php:216
+msgid "Service invalide"
+msgstr ""
+
+#: includes/class-appointment-manager.php:222
+msgid "Statut invalide"
+msgstr ""
+
+#: includes/class-appointment-manager.php:284
+#, php-format
+msgid "Rappel : Rendez-vous du %s"
+msgstr ""
+
+#: includes/class-appointment-manager.php:289
+#, php-format
+msgid ""
+"Bonjour %s,\n"
+"\n"
+"Ceci est un rappel pour votre rendez-vous :\n"
+"\n"
+"Service : %s\n"
+"Date : %s\n"
+"Heure : %s\n"
+"Prestataire : %s\n"
+"\n"
+"Cordialement,\n"
+"L'équipe\n"
+""
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:312
+#: public/booking-form.php:115
+#: public/class-calendrier-rdv-public.php:113
+#: public/class-public.php:67
+msgid "Aucun créneau disponible"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:313
+#: public/class-calendrier-rdv-public.php:114
+msgid "Sélectionnez un horaire"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:314
+#: includes/class-shortcodes.php:78
+msgid "Complet"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:315
+#: includes/class-shortcodes.php:75
+msgid "Vous avez été ajouté à la liste d'attente avec succès."
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:316
+#: includes/class-shortcodes.php:76
+msgid "Vous avez été retiré de la liste d'attente."
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:317
+msgid "Une erreur est survenue lors de la gestion de la liste d'attente."
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:318
+msgid "Ce créneau n'est plus disponible."
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:319
+msgid "Êtes-vous sûr de vouloir quitter la liste d'attente ?"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:371
+#: src/Common/class-assets-manager.php:113
+msgid "Êtes-vous sûr de vouloir supprimer cet élément ?"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:373
+msgid "Enregistré"
+msgstr ""
+
+#: includes/class-calendrier-rdv.php:374
+msgid "Erreur"
+msgstr ""
+
+#: includes/class-cancellation-handler.php:93
+msgid "Paramètres de requête invalides."
+msgstr ""
+
+#: includes/class-cancellation-handler.php:99
+#: public/class-calendrier-rdv-public.php:300
+msgid "Lien d'annulation invalide ou expiré."
+msgstr ""
+
+#: includes/class-cancellation-handler.php:154
+#: includes/rest-edit.php:16
+msgid "Rendez-vous introuvable."
+msgstr ""
+
+#: includes/class-cancellation-handler.php:158
+msgid "Ce rendez-vous a déjà été annulé."
+msgstr ""
+
+#: includes/class-cancellation-handler.php:175
+msgid "Erreur lors de l'annulation du rendez-vous."
+msgstr ""
+
+#. translators: %s: Appointment date.
+#: includes/class-cancellation-handler.php:281
+#, php-format
+msgid "Confirmation d'annulation - Rendez-vous du %s"
+msgstr ""
+
+#. translators: %d: Booking ID.
+#: includes/class-cancellation-handler.php:299
+#, php-format
+msgid "Annulation de rendez-vous #%d"
+msgstr ""
+
+#: includes/class-cancellation-handler.php:350
+msgid "Souhaitez-vous reporter ce rendez-vous ?"
+msgstr ""
+
+#: includes/class-cancellation-handler.php:351
+msgid "Reporter le rendez-vous"
+msgstr ""
+
+#. translators: %s: Formatted appointment date and time.
+#: includes/class-email-reminders.php:170
+#, php-format
+msgid "Rappel : Votre rendez-vous du %s"
+msgstr ""
+
+#. translators: %s: Formatted appointment date and time.
+#: includes/class-email-reminders.php:176
+#, php-format
+msgid "Rappel urgent : Votre rendez-vous approche (%s)"
+msgstr ""
+
+#. translators: %s: Formatted appointment date and time.
+#: includes/class-email-reminders.php:182
+#, php-format
+msgid "Rappel de votre rendez-vous du %s"
+msgstr ""
+
+#. translators: %s: Formatted appointment date.
+#: includes/class-emails.php:77
+#: includes/functions.php:96
+#, php-format
+msgid "Confirmation de votre rendez-vous du %s"
+msgstr ""
+
+#. translators: %s: Formatted appointment date.
+#: includes/class-emails.php:151
+#, php-format
+msgid "Rappel : votre rendez-vous du %s"
+msgstr ""
+
+#. translators: %s: Formatted appointment date.
+#: includes/class-emails.php:225
+#, php-format
+msgid "Annulation de votre rendez-vous du %s"
+msgstr ""
+
+#. translators: %s: Formatted appointment date.
+#: includes/class-emails.php:298
+#, php-format
+msgid "Nouveau rendez-vous le %s"
+msgstr ""
+
+#: includes/class-emails.php:375
+msgid "Un créneau est disponible pour votre rendez-vous"
+msgstr ""
+
+#: includes/class-emails.php:377
+msgid "Mise à jour de votre demande de liste d'attente"
+msgstr ""
+
+#: includes/class-installer.php:237
+msgid "Mon compte"
+msgstr ""
+
+#: includes/class-installer.php:359
+#: src/Database/class-installer.php:239
+msgid "Consultation"
+msgstr ""
+
+#: includes/class-installer.php:361
+#: src/Database/class-installer.php:240
+msgid "Consultation standard"
+msgstr ""
+
+#. translators: %s: Formatted appointment start date and time.
+#: includes/class-logger.php:145
+#, php-format
+msgid "Nouveau rendez-vous créé: %s"
+msgstr ""
+
+#. translators: %d: Appointment ID.
+#: includes/class-logger.php:176
+#, php-format
+msgid "Rendez-vous #%d mis à jour"
+msgstr ""
+
+#. translators: %d: Appointment ID.
+#: includes/class-logger.php:203
+#, php-format
+msgid "Rendez-vous #%d annulé"
+msgstr ""
+
+#. translators: %1$d: Booking ID, %2$s: Payment amount, %3$s: Currency.
+#: includes/class-logger.php:231
+#, php-format
+msgid "Paiement complété pour la réservation #%1$d: %2$s %3$s"
+msgstr ""
+
+#: includes/class-logger.php:256
+msgid "Paramètres du plugin mis à jour"
+msgstr ""
+
+#: includes/class-logger.php:276
+#, php-format
+msgid "Nouveau service créé: %s"
+msgstr ""
+
+#: includes/class-logger.php:300
+#, php-format
+msgid "Service #%d mis à jour: %s"
+msgstr ""
+
+#: includes/class-logger.php:325
+#, php-format
+msgid "Nouveau prestataire créé: %s"
+msgstr ""
+
+#: includes/class-logger.php:348
+#, php-format
+msgid "Prestataire #%d mis à jour: %s"
+msgstr ""
+
+#: includes/class-logger.php:449
+msgid "Utilisateur supprimé"
+msgstr ""
+
+#: includes/class-logger.php:451
+msgid "Système"
+msgstr ""
+
+#: includes/class-payment-handler.php:49
+msgid "Données de paiement invalides"
+msgstr ""
+
+#: includes/class-payment-handler.php:89
+msgid "Données de confirmation de paiement invalides"
+msgstr ""
+
+#: includes/class-payment-handler.php:97
+msgid "Le paiement n'a pas abouti"
+msgstr ""
+
+#: includes/class-payment-handler.php:107
+msgid "Paiement confirmé avec succès"
+msgstr ""
+
+#: includes/class-payment-handler.php:154
+#, php-format
+msgid "Confirmation de paiement pour votre rendez-vous du %s"
+msgstr ""
+
+#: includes/class-rest-api.php:134
+#: includes/class-rest-api.php:166
+#: public/class-public.php:171
+#: public/class-public.php:257
+msgid "Service introuvable"
+msgstr ""
+
+#: includes/class-rest-api.php:185
+#: public/class-public.php:267
+msgid "Ce créneau n'est plus disponible"
+msgstr ""
+
+#: includes/class-rest-api.php:243
+#: public/class-public.php:321
+msgid "Une erreur est survenue lors de l'enregistrement du rendez-vous"
+msgstr ""
+
+#: includes/class-rest-api.php:277
+msgid "Votre rendez-vous a bien été enregistré"
+msgstr ""
+
+#: includes/class-rest-api.php:304
+msgid "Rendez-vous introuvable ou déjà annulé"
+msgstr ""
+
+#: includes/class-rest-api.php:324
+msgid "Une erreur est survenue lors de l'annulation du rendez-vous"
+msgstr ""
+
+#: includes/class-rest-api.php:344
+msgid "Le rendez-vous a bien été annulé"
+msgstr ""
+
+#: includes/class-rest-api.php:382
+msgid "Vous n'avez pas les droits nécessaires pour effectuer cette action"
+msgstr ""
+
+#: includes/class-shortcodes.php:77
+msgid "Place disponible"
+msgstr ""
+
+#: includes/class-shortcodes.php:79
+msgid "Liste d'attente"
+msgstr ""
+
+#: includes/class-shortcodes.php:80
+#: public/class-calendrier-rdv-public.php:118
+#: public/partials/booking-form.php:177
+#: public/partials/waitlist-button.php:54
+#: public/partials/waitlist-button.php:61
+msgid "Rejoindre la liste d'attente"
+msgstr ""
+
+#: includes/class-shortcodes.php:81
+#: public/class-calendrier-rdv-public.php:119
+#: public/partials/waitlist-button.php:44
+#: public/partials/waitlist-button.php:192
+msgid "Quitter la liste d'attente"
+msgstr ""
+
+#: includes/class-shortcodes.php:325
+msgid "Vous devez être connecté en tant qu'administrateur pour voir cette liste."
+msgstr ""
+
+#: includes/class-shortcodes.php:511
+msgid "Vous devez être connecté pour voir vos listes d'attente."
+msgstr ""
+
+#: includes/class-shortcodes.php:513
+msgid "Se connecter"
+msgstr ""
+
+#: includes/class-waitlist-handler.php:47
+#: assets/js/divi-module.js:50
+msgid "Veuillez remplir tous les champs obligatoires."
+msgstr ""
+
+#: includes/class-waitlist-handler.php:51
+msgid "Adresse email invalide."
+msgstr ""
+
+#: includes/class-waitlist-handler.php:56
+#: includes/functions-waitlist.php:64
+msgid "Vous êtes déjà sur la liste d'attente pour ce créneau."
+msgstr ""
+
+#: includes/class-waitlist-handler.php:81
+msgid "Vous avez été ajouté à la liste d'attente avec succès. Nous vous contacterons si une place se libère."
+msgstr ""
+
+#: includes/class-waitlist-handler.php:120
+#: includes/class-waitlist-handler.php:185
+msgid "Réservation automatique depuis la liste d'attente"
+msgstr ""
+
+#: includes/class-waitlist-handler.php:360
+#: templates/emails/waitlist_confirmation.php:15
+#: templates/emails/waitlist_confirmation.php:24
+msgid "Confirmation d'inscription en liste d'attente"
+msgstr ""
+
+#: includes/class-waitlist-handler.php:389
+#: templates/emails/waitlist_availability.php:16
+#: templates/emails/waitlist_availability.php:25
+msgid "Un créneau s'est libéré !"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:59
+msgid "CSV"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:66
+msgid "Excel"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:67
+msgid "Format Excel (XLSX)"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:108
+#: includes/exports/class-export-manager.php:153
+msgid "Vous n'avez pas les permissions nécessaires pour exporter les données."
+msgstr ""
+
+#: includes/exports/class-export-manager.php:120
+#: includes/exports/class-export-manager.php:163
+msgid "Format d'exportation non valide."
+msgstr ""
+
+#: includes/exports/class-export-manager.php:148
+msgid "Lien d'exportation non valide ou expiré."
+msgstr ""
+
+#: includes/exports/class-export-manager.php:174
+msgid "Gestionnaire d'exportation non valide."
+msgstr ""
+
+#: includes/exports/class-export-manager.php:312
+#: includes/exports/class-export-manager.php:385
+msgid "Prix"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:314
+#: includes/exports/class-export-manager.php:388
+#: includes/exports/class-export-manager.php:433
+#: includes/exports/class-export-manager.php:498
+msgid "Créé le"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:382
+#: includes/exports/class-export-manager.php:428
+#: includes/exports/class-export-manager.php:492
+msgid "Nom"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:383
+#: src/Core/Module/CalendrierRdvModule.php:51
+msgid "Description"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:384
+msgid "Durée (min)"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:386
+msgid "Capacité"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:431
+msgid "Utilisateur WordPress"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:432
+msgid "Actif"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:495
+msgid "Adresse"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:496
+msgid "Nombre de RDV"
+msgstr ""
+
+#: includes/exports/class-export-manager.php:497
+msgid "Dernier RDV"
+msgstr ""
+
+#: includes/functions-timezone.php:363
+#, php-format
+msgid "%d heure"
+msgid_plural "%d heures"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/functions-timezone.php:367
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/functions-timezone.php:371
+msgid "minutes"
+msgstr ""
+
+#: includes/functions-waitlist.php:46
+msgid "Tous les champs obligatoires doivent être remplis."
+msgstr ""
+
+#: includes/functions-waitlist.php:105
+msgid "Une erreur est survenue lors de l'ajout à la liste d'attente."
+msgstr ""
+
+#: includes/functions-waitlist.php:131
+msgid "ID de liste d'attente invalide."
+msgstr ""
+
+#: includes/functions-waitlist.php:141
+msgid "Entrée de liste d'attente introuvable."
+msgstr ""
+
+#: includes/functions-waitlist.php:157
+msgid "Impossible de supprimer de la liste d'attente."
+msgstr ""
+
+#: includes/functions-waitlist.php:287
+#, php-format
+msgid "Confirmation d'inscription à la liste d'attente - %s"
+msgstr ""
+
+#: includes/functions-waitlist.php:352
+msgid "Aucun utilisateur en attente pour ce créneau."
+msgstr ""
+
+#: includes/functions-waitlist.php:369
+msgid "Impossible de mettre à jour l'entrée de la liste d'attente."
+msgstr ""
+
+#: includes/functions-waitlist.php:440
+#, php-format
+msgid "Une place s'est libérée pour votre rendez-vous - %s"
+msgstr ""
+
+#: includes/functions-waitlist.php:471
+msgid "La liste d'attente n'est pas activée pour ce service."
+msgstr ""
+
+#: includes/functions-waitlist.php:478
+#, php-format
+msgid "Vous êtes déjà en position %d sur la liste d'attente pour ce créneau."
+msgstr ""
+
+#: includes/functions-waitlist.php:486
+msgid "La liste d'attente pour ce créneau est complète."
+msgstr ""
+
+#: includes/functions-waitlist.php:508
+msgid "Réservation introuvable."
+msgstr ""
+
+#: includes/functions.php:101
+#, php-format
+msgid ""
+"Bonjour %s,\n"
+"\n"
+"Votre rendez-vous a bien été enregistré.\n"
+"\n"
+"Détails :\n"
+"- Prestataire : %s\n"
+"- Date : %s\n"
+"- Heure : %s - %s\n"
+"\n"
+"Cordialement,\n"
+"L'équipe %s"
+msgstr ""
+
+#: includes/mailersend-functions.php:21
+#, php-format
+msgid "Confirmation de votre rendez-vous - %s"
+msgstr ""
+
+#: includes/mailersend-functions.php:23
+#, php-format
+msgid "Bonjour %s,\\nVotre rendez-vous pour la prestation \"%s\" est confirmé le %s à %s avec %s.\\nMerci de votre confiance."
+msgstr ""
+
+#: includes/nonce_manager.php:46
+msgid "Nonce invalide. Veuillez rafraîchir la page et réessayer."
+msgstr ""
+
+#: includes/nonce_manager.php:47
+msgid "Erreur de sécurité"
+msgstr ""
+
+#: includes/rest-api.php:132
+msgid "Données invalides ou incomplètes."
+msgstr ""
+
+#: includes/rest-api.php:143
+msgid "Un rendez-vous existe déjà pour ce créneau."
+msgstr ""
+
+#: includes/rest-api.php:178
+msgid "Erreur lors de l’envoi de l’email de confirmation."
+msgstr ""
+
+#: includes/rest-api.php:180
+msgid "Réservation enregistrée et email envoyé."
+msgstr ""
+
+#: includes/rest-api.php:182
+msgid "Erreur lors de l’enregistrement."
+msgstr ""
+
+#: includes/rest-edit.php:12
+msgid "Jeton de sécurité invalide."
+msgstr ""
+
+#: public/booking-form.php:116
+msgid "Veuillez sélectionner une date"
+msgstr ""
+
+#: public/booking-form.php:117
+msgid "Veuillez sélectionner un créneau"
+msgstr ""
+
+#: public/class-calendrier-rdv-public.php:205
+#: public/class-calendrier-rdv-public.php:294
+#: public/class-public.php:150
+#: src/Core/Api/AjaxHandlers.php:169
+msgid "Paramètres manquants"
+msgstr ""
+
+#: public/class-calendrier-rdv-public.php:259
+msgid "Erreur lors de la création de la réservation"
+msgstr ""
+
+#: public/class-public.php:68
+#: public/partials/booking-form.php:150
+msgid "Sélectionnez une date"
+msgstr ""
+
+#: public/class-public.php:69
+msgid "Sélectionnez une heure"
+msgstr ""
+
+#: public/class-public.php:72
+#: public/class-public.php:229
+msgid "Numéro de téléphone invalide"
+msgstr ""
+
+#: public/class-public.php:145
+#: public/class-public.php:193
+#: src/Core/Database/Appointments.php:19
+#: src/Core/Database/Appointments.php:231
+#: src/Core/Database/Appointments.php:377
+msgid "Nonce invalide"
+msgstr ""
+
+#: public/class-public.php:160
+msgid "Format de date invalide"
+msgstr ""
+
+#: public/class-public.php:219
+msgid "Champs obligatoires manquants : "
+msgstr ""
+
+#: public/class-public.php:246
+msgid "Impossible de prendre un rendez-vous à une date passée"
+msgstr ""
+
+#: public/class-public.php:353
+msgid "Votre rendez-vous a bien été enregistré. Vous allez recevoir un email de confirmation."
+msgstr ""
+
+#: public/partials/booking-form.php:37
+msgid "Sélectionnez un service, une date et un créneau horaire pour votre rendez-vous."
+msgstr ""
+
+#: public/partials/booking-form.php:46
+msgid "1. Choisissez un service"
+msgstr ""
+
+#: public/partials/booking-form.php:55
+#: assets/js/divi-module.js:106
+msgid "Sélectionnez un service"
+msgstr ""
+
+#: public/partials/booking-form.php:71
+msgid "Avec"
+msgstr ""
+
+#: public/partials/booking-form.php:74
+msgid "Peu importe"
+msgstr ""
+
+#: public/partials/booking-form.php:89
+#: src/Admin/Views/settings.php:39
+msgid "Fuseau horaire"
+msgstr ""
+
+#: public/partials/booking-form.php:128
+#: public/partials/booking-form.php:187
+#: src/Public/Views/calendar.php:62
+#: src/Public/Views/calendar.php:84
+msgid "Suivant"
+msgstr ""
+
+#: public/partials/booking-form.php:138
+#: public/partials/booking-form.php:197
+#: src/Public/Views/calendar.php:81
+#: src/Public/Views/calendar.php:153
+msgid "Retour"
+msgstr ""
+
+#: public/partials/booking-form.php:140
+msgid "2. Choisissez une date et une heure"
+msgstr ""
+
+#: public/partials/booking-form.php:156
+msgid "Horaire"
+msgstr ""
+
+#: public/partials/booking-form.php:160
+msgid "Sélectionnez d'abord une date"
+msgstr ""
+
+#: public/partials/booking-form.php:164
+msgid "Chargement des créneaux..."
+msgstr ""
+
+#: public/partials/booking-form.php:167
+msgid "Aucun créneau disponible pour cette date. Veuillez choisir une autre date."
+msgstr ""
+
+#: public/partials/booking-form.php:174
+msgid "Ce créneau est complet. Souhaitez-vous être ajouté à la liste d'attente ?"
+msgstr ""
+
+#: public/partials/booking-form.php:184
+#: public/partials/booking-form.php:278
+msgid "Précédent"
+msgstr ""
+
+#: public/partials/booking-form.php:199
+msgid "3. Vos coordonnées"
+msgstr ""
+
+#: public/partials/booking-form.php:214
+#: src/Public/Views/calendar.php:121
+msgid "Adresse email"
+msgstr ""
+
+#: public/partials/booking-form.php:232
+msgid "Notes ou commentaires (optionnel)"
+msgstr ""
+
+#: public/partials/booking-form.php:241
+msgid "Créer un compte pour gérer mes rendez-vous"
+msgstr ""
+
+#: public/partials/booking-form.php:248
+msgid "Mot de passe"
+msgstr ""
+
+#: public/partials/booking-form.php:253
+msgid "Créez un mot de passe pour votre compte."
+msgstr ""
+
+#. translators: %s: URL de la politique de confidentialité
+#: public/partials/booking-form.php:266
+#, php-format
+msgid "J'accepte la %s de ce site."
+msgstr ""
+
+#: public/partials/booking-form.php:267
+msgid "politique de confidentialité"
+msgstr ""
+
+#: public/partials/booking-form.php:282
+msgid "Confirmer la réservation"
+msgstr ""
+
+#: public/partials/booking-form.php:295
+#: src/Core/Module/CalendrierRdvModule.php:121
+msgid "Votre rendez-vous a été réservé avec succès !"
+msgstr ""
+
+#: public/partials/booking-form.php:300
+msgid "Un email de confirmation a été envoyé à votre adresse email."
+msgstr ""
+
+#: public/partials/booking-form.php:304
+msgid "Récapitulatif de votre réservation"
+msgstr ""
+
+#: public/partials/booking-form.php:307
+#: templates/emails/waitlist_availability.php:40
+#: templates/emails/waitlist_confirmation.php:32
+msgid "Service :"
+msgstr ""
+
+#: public/partials/booking-form.php:311
+#: templates/emails/waitlist_availability.php:44
+#: templates/emails/waitlist_confirmation.php:36
+msgid "Date :"
+msgstr ""
+
+#: public/partials/booking-form.php:315
+#: templates/emails/waitlist_availability.php:48
+#: templates/emails/waitlist_confirmation.php:40
+msgid "Horaire :"
+msgstr ""
+
+#: public/partials/booking-form.php:319
+msgid "Avec :"
+msgstr ""
+
+#: public/partials/booking-form.php:327
+msgid "Retour à l'accueil"
+msgstr ""
+
+#: public/partials/booking-form.php:332
+msgid "Ajouter à mon calendrier"
+msgstr ""
+
+#: public/partials/booking-form.php:338
+msgid "Télécharger le fichier .ics"
+msgstr ""
+
+#: public/partials/booking-form.php:348
+msgid "Ajouter à Outlook"
+msgstr ""
+
+#: public/partials/booking-form.php:362
+msgid "Traitement en cours..."
+msgstr ""
+
+#: public/partials/waitlist-button.php:49
+msgid "Vous êtes sur la liste d'attente pour ce créneau."
+msgstr ""
+
+#: public/partials/waitlist-button.php:65
+msgid "Soyez notifié par email si une place se libère pour ce créneau."
+msgstr ""
+
+#: public/partials/waitlist-button.php:70
+msgid "Votre nom"
+msgstr ""
+
+#: public/partials/waitlist-button.php:80
+msgid "Votre email"
+msgstr ""
+
+#: public/partials/waitlist-button.php:90
+msgid "Votre téléphone"
+msgstr ""
+
+#: public/partials/waitlist-button.php:114
+msgid "Vous avez été ajouté à la liste d'attente avec succès !"
+msgstr ""
+
+#: public/partials/waitlist-button.php:199
+msgid "Vous êtes sur la liste d\\'attente pour ce créneau."
+msgstr ""
+
+#: public/partials/waitlist-button.php:251
+msgid "Rejoindre la liste d\\'attente"
+msgstr ""
+
+#: public/partials/waitlist-status.php:12
+msgid "Mes listes d'attente"
+msgstr ""
+
+#: public/partials/waitlist-status.php:16
+msgid "Vous n'êtes actuellement sur aucune liste d'attente."
+msgstr ""
+
+#: public/partials/waitlist-status.php:27
+msgid "Créneau"
+msgstr ""
+
+#: public/partials/waitlist-status.php:28
+msgid "Position"
+msgstr ""
+
+#: public/partials/waitlist-status.php:48
+msgid "Notifié"
+msgstr ""
+
+#: public/partials/waitlist-status.php:52
+#: public/partials/waitlist-status.php:66
+msgid "Expiré"
+msgstr ""
+
+#: public/partials/waitlist-status.php:56
+msgid "Réservé"
+msgstr ""
+
+#: public/partials/waitlist-status.php:90
+#: public/partials/waitlist-status.php:139
+msgid "Quitter"
+msgstr ""
+
+#: public/partials/waitlist-status.php:99
+#: public/partials/waitlist-status.php:148
+#: assets/js/divi-module.js:161
+msgid "Réserver"
+msgstr ""
+
+#: public/partials/waitlist-status.php:112
+msgid "Vous serez notifié par email dès qu'une place se libérera pour l'un de ces créneaux."
+msgstr ""
+
+#: src/Admin/class-admin.php:128
+msgid "Action non autorisée."
+msgstr ""
+
+#: src/Admin/class-admin.php:133
+#: src/Api/class-rest-controller.php:160
+#: src/Api/class-rest-controller.php:179
+msgid "Vous n'avez pas les droits nécessaires."
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:22
+msgid "Statistiques générales"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:54
+msgid "Prochains rendez-vous"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:126
+msgid "Aucun rendez-vous à venir."
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:138
+msgid "Aide rapide"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:140
+msgid "Comment ajouter un rendez-vous ?"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:141
+msgid "Pour ajouter un nouveau rendez-vous, cliquez sur le bouton \"Planifier un rendez-vous\" dans la liste des rendez-vous."
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:144
+msgid "Gérer les prestataires"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:145
+msgid "Vous pouvez ajouter et gérer les prestataires depuis la section"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:148
+msgid "Configuration"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:149
+msgid "Personnalisez les paramètres du plugin dans la section"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:154
+msgid "Statut du système"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:158
+msgid "Version du plugin"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:162
+msgid "PHP Version"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:166
+msgid "WordPress Version"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:173
+msgid "Rendez-vous à venir"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:178
+msgid "Rendez-vous aujourd'hui"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:183
+msgid "Prestataires actifs"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:189
+msgid "Activité récente"
+msgstr ""
+
+#: src/Admin/Views/dashboard.php:191
+msgid "Aucune activité récente."
+msgstr ""
+
+#: src/Admin/Views/settings.php:18
+msgid "Paramètres enregistrés"
+msgstr ""
+
+#: src/Admin/Views/settings.php:46
+msgid "Définissez le fuseau horaire par défaut pour les rendez-vous."
+msgstr ""
+
+#: src/Admin/Views/settings.php:53
+msgid "Format de date"
+msgstr ""
+
+#. translators: %s: Documentation link
+#: src/Admin/Views/settings.php:65
+#, php-format
+msgid "Format d'affichage des dates. Voir %s pour les options disponibles."
+msgstr ""
+
+#: src/Admin/Views/settings.php:66
+#: src/Admin/Views/settings.php:88
+msgid "la documentation PHP"
+msgstr ""
+
+#: src/Admin/Views/settings.php:75
+msgid "Format d'heure"
+msgstr ""
+
+#. translators: %s: Documentation link
+#: src/Admin/Views/settings.php:87
+#, php-format
+msgid "Format d'affichage des heures. Voir %s pour les options disponibles."
+msgstr ""
+
+#: src/Admin/Views/settings.php:97
+msgid "Enregistrer les modifications"
+msgstr ""
+
+#: src/Api/class-rest-controller.php:149
+msgid "Accès non autorisé."
+msgstr ""
+
+#: src/Api/class-rest-controller.php:257
+#: src/Core/Api/AjaxHandlers.php:110
+#, php-format
+msgid "Les champs suivants sont requis : %s"
+msgstr ""
+
+#: src/Api/class-rest-controller.php:265
+msgid "L'adresse email fournie n'est pas valide."
+msgstr ""
+
+#: src/Api/class-rest-controller.php:310
+msgid "Impossible d'annuler le rendez-vous."
+msgstr ""
+
+#: src/Api/class-rest-controller.php:316
+msgid "Le rendez-vous a été annulé avec succès."
+msgstr ""
+
+#: src/Common/class-nonce-manager.php:96
+#: src/Public/class-public-handler.php:94
+msgid "La vérification de sécurité a échoué. Veuillez rafraîchir la page et réessayer."
+msgstr ""
+
+#: src/Core/Api/AjaxHandlers.php:58
+msgid "Les dates de début et de fin sont requises"
+msgstr ""
+
+#: src/Core/Api/AjaxHandlers.php:138
+#: src/Core/Database/Appointments.php:87
+msgid "Rendez-vous créé avec succès"
+msgstr ""
+
+#: src/Core/Api/AjaxHandlers.php:143
+msgid "Échec de la création du rendez-vous"
+msgstr ""
+
+#: src/Core/Api/AjaxHandlers.php:186
+msgid "Créneau indisponible"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:41
+#: src/Core/Database/Appointments.php:446
+msgid "Ce créneau n'est pas disponible"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:70
+#: src/Core/Database/Appointments.php:94
+msgid "Erreur lors de la création du rendez-vous"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:179
+#, php-format
+msgid "Confirmation de rendez-vous - %s"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:182
+#, php-format
+msgid "Bonjour %1$s,\\n\\nVotre rendez-vous est confirmé pour le %2$s à %3$s avec %4$s.\\n\\nService : %5$s\\nDate : %6$s\\nHeure : %7$s\\n\\nNotes : %8$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:203
+#, php-format
+msgid "Nouveau rendez-vous - %s"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:206
+#, php-format
+msgid "Bonjour %1$s,\\n\\nVous avez un nouveau rendez-vous avec %2$s.\\n\\nService : %3$s\\nDate : %4$s\\nHeure : %5$s\\nClient : %6$s\\nEmail : %7$s\\nTéléphone : %8$s\\n\\nNotes : %9$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:241
+#: src/Core/Database/Appointments.php:387
+msgid "ID du rendez-vous manquant"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:275
+msgid "Erreur lors de l'annulation du rendez-vous"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:284
+msgid "Rendez-vous annulé avec succès"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:330
+#: src/Core/Database/Appointments.php:351
+#, php-format
+msgid "Annulation de rendez-vous - %s"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:333
+#, php-format
+msgid "Bonjour %1$s,\\n\\nVotre rendez-vous a été annulé.\\n\\nService : %2$s\\nDate : %3$s\\nHeure : %4$s\\nPrestataire : %5$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:354
+#, php-format
+msgid "Bonjour %1$s,\\n\\nUn rendez-vous a été annulé.\\n\\nService : %2$s\\nDate : %3$s\\nHeure : %4$s\\nClient : %5$s\\nEmail : %6$s\\nTéléphone : %7$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:397
+msgid "Aucune donnée de mise à jour fournie"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:508
+msgid "Rendez-vous mis à jour avec succès"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:584
+#: src/Core/Database/Appointments.php:608
+#, php-format
+msgid "Modification de rendez-vous - %s"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:587
+#, php-format
+msgid "Bonjour %1$s,\\n\\nVotre rendez-vous a été modifié.\\n\\nNouvelles informations :\\nService : %2$s\\nDate : %3$s\\nHeure : %4$s\\nPrestataire : %5$s\\n\\nAnciennes informations :\\nDate : %6$s\\nHeure : %7$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Appointments.php:611
+#, php-format
+msgid "Bonjour %1$s,\\n\\nUn rendez-vous a été modifié.\\n\\nNouvelles informations :\\nService : %2$s\\nDate : %3$s\\nHeure : %4$s\\nClient : %5$s\\nEmail : %6$s\\nTéléphone : %7$s\\n\\nAnciennes informations :\\nDate : %8$s\\nHeure : %9$s\\n\\nCordialement,"
+msgstr ""
+
+#: src/Core/Database/Providers.php:67
+#: src/Core/Database/Providers.php:135
+#: src/Core/Database/Providers.php:200
+#: src/Core/Database/Services.php:61
+#: src/Core/Database/Services.php:127
+#: src/Core/Database/Services.php:193
+msgid "Permission refusée"
+msgstr ""
+
+#: src/Core/Database/Providers.php:105
+msgid "Erreur lors de la création du prestataire"
+msgstr ""
+
+#: src/Core/Database/Providers.php:112
+msgid "Prestataire créé avec succès"
+msgstr ""
+
+#: src/Core/Database/Providers.php:173
+msgid "Erreur lors de la mise à jour du prestataire"
+msgstr ""
+
+#: src/Core/Database/Providers.php:180
+msgid "Prestataire mis à jour avec succès"
+msgstr ""
+
+#: src/Core/Database/Providers.php:213
+msgid "Erreur lors de la suppression du prestataire"
+msgstr ""
+
+#: src/Core/Database/Providers.php:219
+msgid "Prestataire supprimé avec succès"
+msgstr ""
+
+#: src/Core/Database/Services.php:99
+msgid "Erreur lors de la création du service"
+msgstr ""
+
+#: src/Core/Database/Services.php:106
+msgid "Service créé avec succès"
+msgstr ""
+
+#: src/Core/Database/Services.php:166
+msgid "Erreur lors de la mise à jour du service"
+msgstr ""
+
+#: src/Core/Database/Services.php:174
+msgid "Service mis à jour avec succès"
+msgstr ""
+
+#: src/Core/Database/Services.php:175
+msgid "Aucune modification effectuée"
+msgstr ""
+
+#: src/Core/Database/Services.php:208
+msgid "Erreur lors de la suppression du service"
+msgstr ""
+
+#: src/Core/Database/Services.php:214
+msgid "Service supprimé avec succès"
+msgstr ""
+
+#: src/Core/Database/Services.php:215
+msgid "Aucun service trouvé avec cet ID"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:23
+msgid "Contenu principal"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:27
+msgid "Messages"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:32
+msgid "Layout"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:34
+msgid "Formulaire"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:44
+msgid "Titre"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:48
+msgid "Prenez rendez-vous"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:55
+msgid "Choisissez un service et un créneau"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:60
+msgid "Affichage des services"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:65
+#: src/Core/Module/CalendrierRdvModule.php:87
+msgid "Grille"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:71
+msgid "Colonnes de services"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:82
+msgid "Affichage des prestataires"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:89
+msgid "Liste déroulante"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:96
+msgid "Mode de réservation"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:107
+msgid "Temps minimum de réservation (minutes)"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:117
+msgid "Message de succès"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:124
+msgid "Message d'erreur"
+msgstr ""
+
+#: src/Core/Module/CalendrierRdvModule.php:128
+#: assets/js/divi-module.js:74
+msgid "Une erreur est survenue lors de la réservation."
+msgstr ""
+
+#: src/Core/Security/AjaxSecurity.php:63
+msgid "Nonce de sécurité invalide"
+msgstr ""
+
+#: src/Core/Security/AjaxSecurity.php:72
+msgid "Permissions insuffisantes"
+msgstr ""
+
+#: src/Public/class-public-handler.php:105
+#, php-format
+msgid "Le champ %s est requis."
+msgstr ""
+
+#: src/Public/class-public-handler.php:114
+msgid "Veuillez fournir une adresse email valide."
+msgstr ""
+
+#: src/Public/class-public-handler.php:132
+msgid "Une erreur est survenue lors de l'enregistrement de votre rendez-vous."
+msgstr ""
+
+#: src/Public/Views/calendar.php:31
+msgid "Choisir une date"
+msgstr ""
+
+#: src/Public/Views/calendar.php:35
+msgid "Choisir un créneau"
+msgstr ""
+
+#: src/Public/Views/calendar.php:47
+msgid "Mois précédent"
+msgstr ""
+
+#: src/Public/Views/calendar.php:51
+msgid "Mois suivant"
+msgstr ""
+
+#: src/Public/Views/calendar.php:75
+msgid "Chargement des créneaux disponibles..."
+msgstr ""
+
+#: src/Public/Views/calendar.php:91
+msgid "Confirmer votre rendez-vous"
+msgstr ""
+
+#: src/Public/Views/calendar.php:143
+msgid "Notes supplémentaires"
+msgstr ""
+
+#: src/Public/Views/calendar.php:156
+msgid "Confirmer le rendez-vous"
+msgstr ""
+
+#: src/Public/Views/calendar.php:166
+msgid "Votre rendez-vous a été enregistré !"
+msgstr ""
+
+#: src/Public/Views/calendar.php:167
+msgid "Un email de confirmation vous a été envoyé."
+msgstr ""
+
+#: src/Public/Views/calendar.php:170
+msgid "Prendre un nouveau rendez-vous"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:27
+#: templates/emails/waitlist_confirmation.php:26
+msgid "Bonjour"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:29
+msgid "Une place s'est libérée pour le créneau que vous attendiez ! Nous avons réservé ce créneau pour vous."
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:32
+msgid "Détails de votre réservation"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:36
+msgid "Numéro de réservation :"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:60
+msgid "Important :"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:61
+msgid "Vous avez 24 heures pour confirmer ou annuler ce rendez-vous. Passé ce délai, le créneau sera à nouveau proposé à d'autres personnes en liste d'attente."
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:72
+msgid "Confirmer ce rendez-vous"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:81
+msgid "Annuler ce rendez-vous"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:85
+msgid "Si vous rencontrez des difficultés avec les boutons ci-dessus, vous pouvez copier-coller les liens suivants dans votre navigateur :"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:88
+msgid "Confirmer :"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:95
+msgid "Annuler :"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:103
+#: templates/emails/waitlist_confirmation.php:65
+msgid "Cordialement,"
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:108
+#: templates/emails/waitlist_confirmation.php:70
+msgid "Ceci est un email automatique, merci de ne pas y répondre."
+msgstr ""
+
+#: templates/emails/waitlist_availability.php:109
+#: templates/emails/waitlist_confirmation.php:71
+msgid "Tous droits réservés."
+msgstr ""
+
+#: templates/emails/waitlist_confirmation.php:28
+msgid "Nous vous confirmons votre inscription en liste d'attente pour le créneau suivant :"
+msgstr ""
+
+#: templates/emails/waitlist_confirmation.php:45
+msgid "Position dans la file d'attente :"
+msgstr ""
+
+#: templates/emails/waitlist_confirmation.php:50
+msgid "Vous serez contacté(e) par email si une place se libère pour ce créneau."
+msgstr ""
+
+#: templates/emails/waitlist_confirmation.php:52
+msgid "Si vous ne souhaitez plus être sur la liste d'attente, vous pouvez annuler votre inscription en cliquant sur le lien ci-dessous :"
+msgstr ""
+
+#: templates/emails/waitlist_confirmation.php:61
+msgid "Annuler mon inscription"
+msgstr ""
+
+#: assets/js/divi-module.js:41
+msgid "Une erreur est survenue lors du chargement des données."
+msgstr ""
+
+#: assets/js/divi-module.js:125
+msgid "Sélectionnez un prestataire"
+msgstr ""
