@@ -1,24 +1,315 @@
 
 # Calendrier de Rendez-vous - SAN Digital Solutions
 
-## 📦 Version 1.5.0 - Architecture Modulaire
+[![Tests CI](https://github.com/sergeahiwa/Calendrier-RDV/actions/workflows/php-tests.yml/badge.svg)](https://github.com/sergeahiwa/Calendrier-RDV/actions/workflows/php-tests.yml)
 
-**Date de sortie :** 28 Mai 2025
+## 📋 Table des matières
+- [Fonctionnalités](#-fonctionnalités)
+- [Installation](#-installation)
+- [Utilisation](#-utilisation)
+- [Développement](#-développement)
+- [Sécurité](#-sécurité)
+- [Tests](#-tests)
+- [Contribution](#-contribution)
+- [Licence](#-licence)
 
-### Nouvelles Fonctionnalités
-- Architecture modulaire pour une meilleure maintenabilité
-- Intégration native avec Divi Builder
-- Système de chargement conditionnel des fonctionnalités
+## 🔄 Gestion du Cache
 
-### Améliorations
-- Meilleure séparation entre le cœur du plugin et les intégrations
-- Documentation technique complète
-- Scripts de déploiement automatisés
+Le plugin utilise un système de cache pour optimiser les performances. Consultez [la documentation complète sur le cache](docs/CACHE.md) pour plus de détails.
 
+### Fonctionnalités clés
+- Mise en cache des requêtes fréquentes
+- Invalidation automatique lors des mises à jour
+- Nettoyage automatique à la désactivation
 
-Application de prise de rendez-vous en ligne complète avec gestion multi-prestataires, notifications et interface d'administration avancée.
+### Utilisation basique
+
+```php
+use CalendrierRdv\Core\Cache_Manager;
+
+// Mettre en cache
+Cache_Manager::set('ma_cle', $donnees, HOUR_IN_SECONDS);
+
+// Récupérer du cache
+$donnees = Cache_Manager::get('ma_cle');
+
+// Supprimer du cache
+Cache_Manager::delete('ma_cle');
+```
+
+## 🧪 Stratégie de Test
+
+Consultez le document [TESTING-STRATEGY.md](docs/TESTING-STRATEGY.md) pour une description complète de notre stratégie de test.
+
+### Commandes principales
+
+```bash
+# Tests rapides (unité + intégration SQLite)
+composer test:quick
+
+# Tous les tests (unité, intégration, performance, sécurité, accessibilité)
+composer test:all
+
+# Tests unitaires uniquement (SQLite)
+composer test:unit:sqlite
+
+# Tests d'intégration (MySQL)
+composer test:integration:mysql
+
+# Tests d'intégration SMS (nécessite la configuration Twilio)
+composer test:sms
+
+# Tests de performance
+composer test:performance
+
+# Générer un rapport de couverture de code
+composer test:coverage
+
+# Lancer les tests avec un fichier de configuration spécifique
+./vendor/bin/phpunit -c phpunit.performance.xml
+```
+
+### Tests de performance
+
+Les tests de performance sont conçus pour évaluer les performances du système sous charge. Par défaut, ils sont exclus des exécutions de test normales car ils peuvent prendre plus de temps à s'exécuter.
+
+Pour exécuter les tests de performance :
+
+```bash
+# Exécuter tous les tests de performance
+composer test:performance
+
+# Exécuter un test spécifique
+./vendor/bin/phpunit -c phpunit.performance.xml --filter testEmailNotificationLoad
+
+# Générer un rapport JUnit pour l'intégration continue
+composer test:performance:ci
+```
+
+#### Configuration des tests de performance
+
+Les tests de performance peuvent être configurés à l'aide de variables d'environnement :
+
+```bash
+# Nombre d'itérations pour les petits tests de charge (par défaut: 100)
+TEST_LOAD_SMALL=100
+
+# Nombre d'itérations pour les tests de charge moyens (par défaut: 1000)
+TEST_LOAD_MEDIUM=1000
+
+# Nombre d'itérations pour les tests de charge importants (par défaut: 10000)
+TEST_LOAD_LARGE=10000
+
+# Seuil d'avertissement en secondes (par défaut: 5.0)
+TEST_WARNING_THRESHOLD=5.0
+
+# Seuil critique en secondes (par défaut: 10.0)
+TEST_CRITICAL_THRESHOLD=10.0
+```
+
+### Configuration des tests SMS
+
+Pour exécuter les tests d'intégration SMS avec Twilio, vous devez configurer les variables d'environnement suivantes :
+
+```bash
+# Dans un fichier .env à la racine du projet
+TWILIO_ACCOUNT_SID=votre_sid_twilio
+TWILIO_AUTH_TOKEN=votre_token_twilio
+```
+
+Ou les exporter dans votre shell :
+
+```bash
+export TWILIO_ACCOUNT_SID=votre_sid_twilio
+export TWILIO_AUTH_TOKEN=votre_token_twilio
+```
+
+**Note :** Les tests utiliseront le numéro de test Twilio `+15005550006` pour les tests d'envoi réel.
+
+## 🛡 Charte de Non-Régression
+
+Pour garantir la stabilité et la qualité du projet, nous suivons une [charte de non-régression](docs/NON-REGRESSION.md) stricte qui encadre toutes les modifications apportées au code. Cette charte définit les bonnes pratiques et les processus à suivre pour éviter toute régression.
+
+## 🏗 Structure du Projet
+
+Le plugin suit une architecture modulaire moderne avec une séparation claire des responsabilités :
+
+```
+calendrier-rdv/
+├── src/                      # Code source du plugin
+│   ├── Admin/               # Gestion de l'administration
+│   │   ├── Views/          # Templates d'administration
+│   │   └── class-admin.php # Classe principale d'administration
+│   │
+│   ├── Api/               # Points d'entrée de l'API REST
+│   │   └── RestController.php
+│   │
+│   ├── Core/              # Fonctionnalités de base
+│   │   ├── Security/       # Sécurité et authentification
+│   │   ├── Hooks/          # Hooks WordPress
+│   │   └── ...
+│   │
+│   ├── Domain/            # Logique métier
+│   │   ├── Model/         # Modèles de données
+│   │   ├── Repository/     # Accès aux données
+│   │   └── Service/       # Services métier
+│   │
+│   ├── Infrastructure/    # Implémentations techniques
+│   │   ├── Database/      # Accès à la base de données
+│   │   └── Export/        # Fonctionnalités d'export
+│   │
+│   └── Public/            # Gestion du front-end
+│       ├── assets/       # Assets du front-end
+│       ├── Views/        # Templates front-end
+│       └── class-public.php
+│
+├── assets/                # Fichiers statiques globaux
+│   ├── css/              # Feuilles de style
+│   ├── js/               # Scripts JavaScript
+│   └── images/           # Images et médias
+│
+├── templates/            # Templates globaux
+├── tests/                # Tests automatisés
+├── vendor/               # Dépendances Composer
+└── languages/            # Fichiers de traduction
+```
+
+### Architecture Technique
+
+1. **Couche Présentation**
+   - `src/Public/` : Gestion du front-end
+   - `src/Admin/` : Interface d'administration
+   - `templates/` : Templates réutilisables
+
+2. **Couche Application**
+   - `src/Api/` : Points d'entrée de l'API
+   - `src/Core/` : Fonctionnalités centrales
+
+3. **Couche Domaine**
+   - `src/Domain/` : Logique métier pure
+   - Modèles, règles métier, validation
+
+4. **Couche Infrastructure**
+   - `src/Infrastructure/` : Implémentations techniques
+   - Base de données, services externes, etc.
+
+### Bonnes Pratiques
+
+- **PSR-4** : Autoloading des classes via Composer
+- **MVC** : Séparation claire Modèle-Vue-Contrôleur
+- **SOLID** : Principes de conception orientée objet
+- **Tests** : Couverture de code avec PHPUnit
+- **Sécurité** : Protection CSRF, validation des entrées, requêtes préparées
+
+### Prérequis Techniques
+
+- PHP 7.4+ (recommandé : PHP 8.1+)
+- WordPress 5.8+
+- Composer pour la gestion des dépendances
+- MySQL 5.7+ ou MariaDB 10.3+
+
+### Installation
+
+1. Télécharger et installer via le répertoire des plugins WordPress
+2. OU installer manuellement via FTP :
+   ```bash
+   cd wp-content/plugins/
+   git clone [url-du-depot] calendrier-rdv
+   cd calendrier-rdv
+   composer install
+   ```
+3. Activer le plugin dans l'administration WordPress
+
+### Développement
+
+Pour contribuer au développement :
+
+```bash
+# Cloner le dépôt
+git clone [url-du-depot] calendrier-rdv
+cd calendrier-rdv
+
+# Installer les dépendances
+composer install
+
+# Lancer les tests
+composer test
+
+# Générer la documentation
+composer docs
+```
+
+### Sécurité
+
+Pour signaler une vulnérabilité de sécurité, veuillez consulter notre [politique de sécurité](SECURITY.md).
 
 ---
+
+**Dernière mise à jour :** 3 Juin 2025  
+**Version :** 1.5.3
+
+
+Application de prise de rendez-vous en ligne complète avec gestion multi-prestataires, notifications, interface d'administration avancée et sécurité renforcée contre les attaques par force brute.
+
+---
+
+## 🔒 Sécurité Renforcée
+
+Le plugin intègre un système complet de protection contre les attaques par force brute avec les fonctionnalités suivantes :
+
+### Protection des Connexions
+- Limitation du nombre de tentatives de connexion échouées
+- Verrouillage temporaire des comptes après plusieurs échecs
+- Blacklist automatique des adresses IP suspectes
+- Intégration avec reCAPTCHA pour les formulaires de connexion
+
+### Journalisation et Surveillance
+- Enregistrement détaillé de toutes les tentatives de connexion
+- Notifications par email pour les activités suspectes
+- Tableau de bord de sécurité dans l'administration
+- Nettoyage automatique des anciennes entrées
+
+### Configuration Recommandée
+```php
+// Dans wp-config.php
+define('RECAPTCHA_SITE_KEY', 'votre_cle_site');
+define('RECAPTCHA_SECRET_KEY', 'votre_cle_secrete');
+```
+
+Pour plus de détails sur la configuration avancée, consultez la [documentation complète](docs/SECURITY-IMPLEMENTATION.md).
+
+## 🛠 Outils de Suivi d'Avancement
+
+### Génération de Rapports
+
+Générez un rapport d'avancement à tout moment :
+
+```bash
+# Générer un rapport en Markdown
+php scripts/generate-progress-report.php
+
+# Générer un rapport HTML
+php scripts/generate-progress-report.php --output=html
+
+# Générer un rapport JSON
+php scripts/generate-progress-report.php --output=json
+```
+
+### Configuration des Hooks Git
+
+Pour configurer les hooks Git qui génèrent automatiquement un rapport à chaque commit :
+
+```bash
+# Rendre le script exécutable (Linux/Mac)
+chmod +x scripts/setup-git-hooks.sh
+
+# Exécuter le script d'installation
+./scripts/setup-git-hooks.sh
+```
+
+### Intégration CI/CD
+
+Le workflow GitHub Actions `progress-report.yml` génère automatiquement un rapport à chaque push sur les branches principales.
 
 ## 🏗️ Architecture Modulaire
 
@@ -61,6 +352,15 @@ Voir [ARCHITECTURE.md](docs/ARCHITECTURE.md) pour plus de détails.
 - **Tableau de bord** avec indicateurs et statistiques  
 - **Export des données** (CSV, Excel, PDF)  
 - **Logs détaillés** de toutes les actions  
+
+### 🔒 Sécurité Avancée
+- **Protection contre les attaques par force brute** avec limitation des tentatives de connexion
+- **Verrouillage temporaire** des comptes après plusieurs échecs
+- **Journalisation détaillée** des activités suspectes
+- **Gestion sécurisée des sessions**
+- **Protection CSRF** intégrée
+
+> ℹ️ Consultez le fichier [SECURITY.md](SECURITY.md) pour une documentation complète sur les fonctionnalités de sécurité.
 
 ### Développement et Maintenance
 - **Tests unitaires complets** avec 100% de couverture de code  
@@ -300,7 +600,58 @@ calendrier-rdv/
 
 ---
 
-## 🛡️ Outils de Sécurité et Audit
+## 📚 Documentation Technique
+
+### Gestion des Tentatives de Connexion
+
+#### Fonctionnement
+Le système de limitation des tentatives de connexion protège contre les attaques par force brute en :
+1. Enregistrant chaque tentative de connexion échouée
+2. Verrouillant temporairement le compte après 5 échecs
+3. Envoyant une notification à l'administrateur en cas de verrouillage
+4. Déverrouillant automatiquement le compte après 30 minutes
+
+#### Fichiers Clés
+- `src/Core/Security/LoginAttempts.php` : Gestion des tentatives de connexion
+- `src/Core/Hooks/LoginHooks.php` : Intégration avec les hooks WordPress
+- `tests/test-login-hooks.php` : Tests d'intégration
+
+#### Méthodes Principales
+- `record_failed_attempt()` : Enregistre une tentative échouée
+- `is_locked()` : Vérifie si un compte est verrouillé
+- `clear_attempts()` : Réinitialise les tentatives après une connexion réussie
+- `cleanup_old_attempts()` : Nettoie les anciennes tentatives
+
+## 🛡️ Sécurité Renforcée
+
+### Dernières Améliorations de Sécurité
+
+#### 🔐 Correction du Déverrouillage des Comptes (v1.5.2)
+- **Problème résolu** : Correction d'un problème critique empêchant le déverrouillage des comptes après une période de blocage
+- **Solution** : Refonte de l'algorithme de gestion des tentatives de connexion pour une meilleure fiabilité
+- **Avantages** :
+  - Détection et déblocage fiables des comptes verrouillés
+  - Journalisation détaillée pour le débogage
+  - Meilleure expérience utilisateur
+
+### Fonctionnalités de Sécurité
+
+#### Protection contre les attaques par force brute
+- Limitation des tentatives de connexion échouées
+- Verrouillage temporaire des comptes après plusieurs échecs
+- Notifications par email pour les activités suspectes
+
+#### Bonnes pratiques implémentées
+- Validation et assainissement des entrées utilisateur
+- Utilisation de requêtes préparées pour la base de données
+- Gestion sécurisée des sessions
+- Protection CSRF sur les formulaires
+
+### Audit de Sécurité
+
+Des audits de sécurité réguliers sont effectués pour identifier et corriger les vulnérabilités potentielles. Consultez le fichier [SECURITY.md](SECURITY.md) pour plus d'informations sur la politique de sécurité et le signalement des vulnérabilités.
+
+### Outils de Sécurité et Audit
 
 ### 🔍 Scripts d'Audit Git
 

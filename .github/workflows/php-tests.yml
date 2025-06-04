@@ -5,22 +5,21 @@ on:
     branches: [ main, develop ]
   pull_request:
     branches: [ main, develop ]
+  workflow_dispatch:
 
 jobs:
   test:
-    name: Run PHPUnit Tests
+    name: PHP ${{ matrix.php }} - WP ${{ matrix.wordpress }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        php: [ '7.4', '8.0', '8.1' ]
-        wordpress: [ 'latest', '6.2' ]
+        php: ['8.1', '8.2']
+        wordpress: ['latest', '6.2']
         include:
-          - php: '7.4'
-            experimental: false
-          - php: '8.0'
-            experimental: false
           - php: '8.1'
+            experimental: false
+          - php: '8.2'
             experimental: false
 
     steps:
@@ -31,8 +30,9 @@ jobs:
       uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php }}
-        extensions: mbstring, dom, fileinfo, mysql, curl, gd, intl, json, mbstring, xml, zip
+        extensions: mbstring, dom, fileinfo, mysql, curl, gd, intl, json, mbstring, xml, zip, sqlite3, pdo_sqlite
         coverage: xdebug
+        tools: composer:v2
 
     - name: Setup WordPress test environment
       uses: wordpress/wordpress-tests-cli@v2
@@ -43,11 +43,6 @@ jobs:
         db-pass: root
         db-host: 127.0.0.1
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '16.x'
-
     - name: Install dependencies
       run: |
         composer install --prefer-dist --no-progress --no-suggest
@@ -56,7 +51,11 @@ jobs:
     - name: Run PHPUnit tests
       run: |
         mkdir -p tests/logs
+        # Exécuter les tests PHPUnit standards
         ./vendor/bin/phpunit --coverage-clover=coverage.xml --log-junit=junit.xml
+        
+        # Exécuter nos tests personnalisés
+        php test-cache-manual.php
 
     - name: Upload code coverage to Codecov
       if: matrix.experimental == false

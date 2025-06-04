@@ -3,11 +3,13 @@ node_modules/
 vendor/
 package-lock.json
 composer.lock
+composer.phar
 
 # WordPress core
 wordpress/
 wp-config.php
 wp-content/
+wp-tests-config.php
 
 # Environment files
 .env
@@ -16,20 +18,25 @@ wp-content/
 
 # Logs
 *.log
+logs/
 
 # System Files
 .DS_Store
 Thumbs.db
+dump.rdb
 
 # IDE specific files
 .idea/
 .vscode/
 *.sublime-workspace
 *.sublime-project
+*.code-workspace
 
 # Testing
 /coverage/
 .phpunit.result.cache
+phpunit.xml
+phpunit.xml.dist
 
 # Build files
 /dist/
@@ -49,6 +56,51 @@ Thumbs.db
 
 # OS generated files
 .DS_Store
+
+# Project specific
+backup/
+*.bak
+*.swp
+*.swo
+*~
+
+# Database
+dump.sql
+*.sqlite
+
+# Backup files
+*.zip
+*.tar
+*.gz
+*.7z
+
+# Local overrides
+local-config.php
+wp-config-local.php
+
+# Debug
+/debug.log
+*.log
+
+# Vendor backup
+vendor-backup.zip
+
+# Test artifacts
+/test-results/
+/phpunit/coverage/
+
+# IDE specific
+.idea/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 .DS_Store?
 ._*
 .Spotlight-V100

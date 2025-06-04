@@ -1,5 +1,21 @@
 # Calendrier RDV - Journal des modifications
 
+## [1.6.0] - 2025-06-04
+
+### Ajouté
+- **Système de cache avancé** : Nouvelle classe `Cache_Manager` pour optimiser les performances
+  - Gestion des opérations de base (get/set/delete/flush)
+  - Support de l'expiration automatique des entrées
+  - Compatibilité avec les environnements de test
+- **Tests unitaires** : Couverture complète des tests pour le système de cache
+- **Documentation** : Guide détaillé sur l'utilisation du cache dans `docs/CACHE.md`
+- **Intégration continue** : Configuration GitHub Actions pour exécuter les tests automatiquement
+
+### Modifié
+- **Architecture** : Refactorisation du code pour une meilleure maintenabilité
+- **Sécurité** : Renforcement des validations des clés de cache
+- **Documentation** : Mise à jour du README avec les nouvelles fonctionnalités
+
 ## [1.5.1] - 2025-06-01
 
 ### Ajouté
