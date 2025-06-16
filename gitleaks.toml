@@ -1,0 +1,18 @@
+# Gitleaks TOML configuration par défaut (version 8.x)
+# Source officielle : https://github.com/gitleaks/gitleaks/blob/master/config/gitleaks.toml
+
+[[rules]]
+id = "generic-api-key"
+regex = '''(?i)(api[_-]?key|secret|token|password)["']?\s*[:=]\s*["']?[0-9a-zA-Z\-_]{16,}["']?'''
+tags = ["key", "API", "generic"]
+
+[[rules]]
+id = "private-key"
+regex = '''-----BEGIN (?:RSA|DSA|EC|OPENSSH) PRIVATE KEY-----'''
+tags = ["key", "private", "pem"]
+
+# Ajoutez ici d'autres règles personnalisées si besoin.
+
+[allowlist]
+# Fichiers, chemins ou regex à ignorer (exemple)
+# paths = ["tests/fixtures/*", "docs/*"]
